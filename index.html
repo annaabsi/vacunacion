@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+    <meta name="theme-color" content="#FFF"/>
+    <script src="https://connect.facebook.net/es_LA/sdk.js?hash=6d8f9720f47d5152c43742a0c2e75958&amp;ua=modern_es6"
+            async crossorigin="anonymous"></script>
+    <script id="facebook-jssdk" src="//connect.facebook.net/es_LA/sdk.js"></script>
+    <link rel="canonical" href="https://especiales.larepublica.pe/"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="googlebot" content="index, follow"/>
+    <meta name="description"
+          content="En febrero se inició la distribución de dosis para enfrentar el avance de la pandemia. Así evoluciona la cobertura a nivel nacional."/>
+    <meta property="og:url" content="https://especiales.larepublica.pe/"/>
+    <meta property="og:title" content="Avance de la vacunación contra la COVID-19 en Perú"/>
+    <meta property="og:image" content="image.jpg"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta property="fb:pages" content="94604237016"/>
+    <meta property="fb:app_id" content="489210501129201"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@larepublica_pe"/>
+    <meta name="twitter:title" content="Avance de la vacunación contra la COVID-19 en Perú"/>
+    <meta name="twitter:description" content="En febrero se inició la distribución de dosis para enfrentar el avance de la pandemia. Así evoluciona la cobertura a nivel nacional."/>
+    <meta name="twitter:image" content="image.jpg"/>
+    <meta name="distribution" content="global"/>
+    <meta name="rating" content="general"/>
+    <meta name="lang" content="es_PE"/>
+    <meta name="author" content="Redacción LR"/>
+    <meta name="keywords" content=""/>
+    <title>Avance de la vacunación contra la COVID-19 en Perú</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.larepublica.pe/favicon-32x32.png"/>
+</head>
+<body>
+<style type="text/css">
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #212529;
+    font-family: sans-serif;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+    color: #212529;
+}
+
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 100px;
+}
+
+.w-1000 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+footer {
+    padding: 42px;
+    font-family: sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    transition: all 0.5s ease;
+    padding: 15px 42px;
+    background: #ff0102;
+}
+
+header span {
+    font-size: 0;
+}
+
+header img {
+    width: 240px;
+}
+
+footer span {
+    display: block;
+    text-align: center;
+    color: #545b6a;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+span [class*="btn-"] {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+span a.btn-fb {
+    margin-left: 0;
+}
+
+span a.btn-fb, span a.btn-twt, span a.btn-wsp {
+    background-image: url(https://files.larepublica.pe/Larepublica/2020/11/09/iconos-redes-sociales-blanco-1604962294.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+span a.btn-twt {
+    background-position: 0 -40px;
+    background-repeat: no-repeat;
+}
+
+span a.btn-wsp {
+    background-position: 0 -80px;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 5.5rem;
+    line-height: 1.3;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto 25px;
+}
+
+h4 {
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto 25px;
+    max-width: 750px;
+}
+
+h4:before {
+	position: relative;
+    width: 40px;
+    height: 4px;
+    background-color: #e30613;
+    content: "";
+    display: block;
+    bottom: 4px;
+}
+
+.texto-lr {
+    font-size: 11pt;
+    font-weight: 400;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.texto-lr, h1, h2 {
+    font-family: sans-serif;
+    width: 100%;
+}
+
+h1, h2 {
+    color: #212529;
+    /*text-align: center;*/
+    width: 100%;
+}
+
+h1 {
+    margin: 0 auto;
+    letter-spacing: -1.2px;
+}
+
+.texto-lr {
+    margin: 0 auto 25px;
+    line-height: 1.38;
+    display: block;
+}
+
+.texto-lr {
+    margin: 0 auto 20px;
+    padding: 0 15px;
+}
+
+h1 {
+    font-size: 3em !important;
+    padding: 0 15px;
+}
+
+h2 {
+    padding: 0 15px;
+    font-size: 1.8rem;
+    margin: 20px auto;
+}
+
+h3 {
+    margin: 25px auto 15px;
+    padding: 0 15px;
+}
+
+h4 {
+	padding: 0 15px;
+}
+
+@media (max-width: 767px) {
+    .p-10 {
+        padding: 0 10px;
+    }
+
+    
+
+    header {
+        padding: 15px 20px;
+    }
+
+    footer {
+        padding: 27.9px 30px;
+    }
+
+    .w-text {
+        padding: 0 30px 40px;
+        max-width: 100%;
+    }
+
+}
+
+@media (min-width: 768px) {
+    body {
+        margin-top: 140px;
+    }
+
+    header img {
+        width: 300px;
+    }
+
+    span [class*="btn-"] {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    span a.btn-fb, span a.btn-twt, span a.btn-wsp {
+        background-size: cover;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    span a.btn-twt {
+        background-position: 0 -40px;
+        background-repeat: no-repeat;
+    }
+
+    span a.btn-wsp {
+        background-position: 0 -80px;
+        background-repeat: no-repeat;
+    }
+}    </style>
+<style>        h1 {
+    font-size: 48px;
+}
+
+.headline {
+    font-weight: 100;
+}
+
+.container {
+    padding: 45px 15px 15px 15px;
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+.wrapper {
+    border-left: 5px solid #eaeaea;
+    padding: 0 25px;
+}
+
+.item-list {
+    font-family: sans-serif;
+    position: relative;
+}
+
+.item-list::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 7%;
+    transform: translate(-50%, -50%);
+    left: -4.4%;
+    background-color: #fe2d04;
+    z-index: 1;
+}
+
+.item-list::after {
+    content: "";
+    background-color: #000;
+    border-radius: 50%;
+    height: 7px;
+    left: -12%;
+    position: absolute;
+    top: 7%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+}
+
+.item-list h4 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.item-list p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0 0 30px 0;
+}
+
+.point {
+    background-color: #eaeaea;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 20px;
+    left: -12%;
+    position: absolute;
+    top: 7%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+}
+
+time {
+    font-size: 20px;
+    font-style: italic;
+}
+.flourish-embed {
+	margin: 20px 10px;
+}
+
+@media (min-width: 360px) {
+    .item-list::before {
+        left: -3.5%;
+        top: 9%;
+    }
+
+    .item-list::after {
+        left: -10%;
+        top: 9%;
+    }
+
+    .point {
+        left: -10%;
+        top: 9%;
+    }
+}
+
+@media (min-width: 400px) {
+    .item-list::before {
+    }
+
+    .item-list::after {
+        left: -9%;
+    }
+
+    .point {
+        left: -9%;
+    }
+}
+
+@media (min-width: 410px) {
+    .item-list::before {
+    }
+
+    .item-list::after {
+        left: -8.5%;
+    }
+
+    .point {
+        left: -8.5%;
+    }
+}
+
+@media (min-width: 768px) {
+    .item-list::before {
+        left: -1.4%;
+        top: 15%;
+    }
+
+    .item-list::after {
+        left: -4%;
+        top: 15%;
+    }
+
+    .point {
+        border: 3px solid #fff;
+        height: 25px;
+        left: -4%;
+        top: 15%;
+        width: 25px;
+    }
+
+    .headline {
+        margin: 30px auto 0px;
+    }
+    .flourish-embed {
+    	max-width: 720px;
+    	margin: 10px auto;
+    }
+    #fecha {
+    	margin: 20px 0 !important;
+    }
+}
+
+@media (min-width: 999px) {
+    .item-list::before {
+        left: -1.2%;
+    }
+
+    .item-list::after {
+        left: -3.1%;
+    }
+
+    .point {
+        left: -3.1%;
+    }
+}    </style>
+<style>        .container__menu {
+    font-size: 0;
+}
+
+.mapa_distribucion {
+    display: block;
+    margin: 0 auto;
+    max-width: 970px;
+    width: 100%;
+}
+
+.menu__button {
+    display: inline-block;
+    vertical-align: middle;
+    width: 38px;
+}
+
+.menu__button button {
+    background-color: transparent;
+    border: none;
+    height: 17px;
+    width: 20px;
+}
+
+.menu__button button span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    margin: 0 0 3px 0;
+    border-radius: 15px;
+}
+
+.menu__button button span:last-child {
+    margin: 0;
+}
+
+.menu__left {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 38px); /*width: 160px;*/
+}
+
+.menu__rigth {
+    display: none; /*display: inline-block;*/
+    text-align: right;
+    vertical-align: middle;
+    width: calc(100% - 198px);
+}
+
+.content__menu-mobile {
+    display: none;
+    background-color: #FFF;
+    border-bottom: 1px solid #404040;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 77px;
+    width: 100%;
+}
+
+.content__menu-mobile ul {
+    padding: 0 0 10px 0;
+}
+
+.content__menu-mobile ul li {
+    padding: 10px 0 0 0;
+}
+
+.content__menu-mobile ul li a {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.active-menu {
+    display: block;
+}
+
+.items__menu {
+    display: none;
+}
+
+.items__menu ul {
+    padding: 10px 0;
+}
+
+.items__menu ul li {
+    display: inline-block;
+    margin: 0 0 0 10px;
+}
+
+.items__menu ul li a {
+    color: #383939;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .menu__button {
+        display: none;
+    }
+
+    .menu__left {
+        width: 300px;
+    }
+
+    .menu__rigth {
+        display: inline-block;
+        width: calc(100% - 300px);
+    }
+
+    .content__menu-mobile {
+        display: none;
+    }
+
+    .items__menu {
+        display: block;
+    }
+    .col-6 {
+		width: 49%;
+	    display: inline-block;
+	    margin-top: 15px;
+	    font-size: 14px;
+	    padding: 5px;
+	}
+}
+.total-box {
+    text-align: center;
+    background-color: #eee;
+    padding: 20px;
+    margin: auto;
+    max-width: 450px;
+    margin-bottom: 15px;
+}
+.total-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: red;
+    margin: 0;
+}
+.total-number {
+    font-size: 40px;
+    font-weight: bold;
+}
+.total-subtitle {
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+.total-box-2 {
+    text-align: center;
+    background-color: #eee;
+    padding: 20px;
+    margin: auto;
+    min-width: 250px;
+}
+.col-xs-6 {
+	width: 48%;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    padding: 5px;
+}
+.border-right {
+	border-right: 1px solid black;
+}
+#fecha {
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px 0;
+}
+#content__teaser {
+	max-width: 1440px;
+	margin: auto;
+}
+iframe {
+	padding: 15px;
+}
+.dw-chart-footer {
+	display: none
+}
+</style>
+<script src="https://d3js.org/d3.v4.js"></script>
+<header id="w-header">
+    <div class="container__menu">
+        <!-- <div class="menu__button">                <div class="menu"> <button id="menuMobile"> <span></span> <span></span> <span></span> </button> </div>            </div> -->
+        <div class="menu__left"><a href="https://larepublica.pe/" rel="noopener" style="display: inline-block;"
+                                   target="_blank">
+            <picture>
+                <source id="w-sourceLogoDesktop" media="(min-width: 768px)"
+                        srcset="https://cdn.larepublica.pe/images/content/default/logo-lr.svg"/>
+                <img id="w-sourceLogoMobile" src="https://cdn.larepublica.pe/images/content/default/logo-lr.svg"/>
+            </picture>
+        </a></div>
+        <div class="menu__rigth"><span class="items_shared"> <a class="btn-fb btn-Social" data-social="facebook" href="javascript:void(0)" id="id-btn-fb" rel="noopener"> </a> <a class="btn-twt btn-Social" data-social="twitter" href="javascript:void(0)" id="id-btn-twt" rel="noopener"> </a> <a class="btn-wsp" href="https://api.whatsapp.com/send?text=https://especiales.larepublica.pe/" id="id-btn-wsp" rel="noopener" target="_blank"> </a> </span></div>
+    </div>
+</header>
+
+<div id="content__main"><h1 style="text-align: center;">Avance de la vacunación contra la COVID-19 en Perú</h1>
+
+    <h2 style="text-align: center;">En febrero se inició la distribución de dosis para enfrentar el avance de la pandemia. Así evoluciona la cobertura a nivel nacional.</h2>
+    <p id="fecha">Reporte actualizado al: </p>
+    <div class="total-box">
+      <p class="total-title">Total vacunación completa</p>
+      <p class="total-number" id="total-vacunados"></p>
+      <div class="row">
+        <div class="col-xs-6 border-right">
+          <p class="total-subtitle">Solo primera dosis</p>
+          <p id="solo-primera-dosis"></p>
+        </div>
+        <div class="col-xs-6">
+          <p class="total-subtitle">Con segunda dosis</p>
+          <p id="segunda-dosis"></p>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+d3.csv("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/departamentos.csv", function(data){
+
+    var totalSum = [d3.sum(data.map(function(d){ return d.DOSIS1})),
+       d3.sum(data.map(function(d){ return d.DOSIS2}))];
+    var dataDate = data[0]["FECHA_CORTE"];
+    var dd = dataDate.slice(6,8);
+    var mm = dataDate.slice(4,6);
+    var yyyy = dataDate.slice(0,4);
+    hoy = dd + '/' + mm + '/' + yyyy;
+    var fechaActualizacion = d3.select("#fecha").append("span").text(hoy);
+    var totalVacunados = d3.select("#total-vacunados").append("span").text(totalSum[1].toLocaleString());
+    var primeraDosis = d3.select("#solo-primera-dosis").append("span").text((totalSum[0]-totalSum[1]).toLocaleString());
+    var segundaDosis = d3.select("#segunda-dosis").append("span").text(totalSum[1].toLocaleString());
+    var indiceVacunados = d3.select("#indice-vacunados").append("span").text(Math.round((totalSum[1]/(29381884/100000))).toLocaleString());
+});
+
+</script>
+
+<div id="content__teaser">
+
+    <div class="col-6">
+    	<iframe title="Avance por región" aria-label="Mapa" id="datawrapper-chart-aljw1" src="https://datawrapper.dwcdn.net/aljw1/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="539"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+			</script>
+    </div>
+    <div class="col-6">
+    	<iframe title="Avance por región" aria-label="chart" id="datawrapper-chart-HxPlI" src="https://datawrapper.dwcdn.net/HxPlI/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="788"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+			</script>
+    </div>
+
+    <p class="texto-lr">Un primer lote de 300.000 vacunas, desarrolladas por el laboratorio chino Shinopharm, llegó al Perú el 7 de febrero. Desde entonces se ha puesto en marcha la distribución nacional del fármaco en el marco de la Fase 1 de inmunización, cuyo objetivo principal es vacunar a personal de salud que se encuentra en primera línea de atención contra la COVID-19, según informó el Minsa. Hasta el momento, la región donde más personas recibieron la primera dosis es Lima.</p>
+
+    <p class="texto-lr">Cabe aclarar que la vacunación completa consta de dos dosis, por lo que se espera que la cobertura de la Fase 1 se vaya completando a lo largo del primer trimestre de 2021. El presidente Francisco Sagasti estimó, por su parte, que 10 millones de peruanos estarían vacunados antes del 28 de julio.</p>
+
+
+    <iframe title="Vacunados por día y acumulado (1era Dosis)" aria-label="Interactive line chart" id="datawrapper-chart-eldOi" src="https://datawrapper.dwcdn.net/eldOi/8/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+		</script>
+    <br>
+    <iframe title="Vacunados por día y acumulado (2da Dosis)" aria-label="Interactive line chart" id="datawrapper-chart-0easz" src="https://datawrapper.dwcdn.net/0easz/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+	</script>
+
+	<h3>Avance diario de la vacunación contra la COVID-19</h3>
+
+	<p class="texto-lr">A partir del 9 de febrero, la aplicación de vacuna contra la COVID-19 en el país se incrementa a ritmo acelerado. El primer día, 3449 personas recibieron la primera dosis. Las cifras reportadas por el Minsa indican un crecimiento de, al menos, 3000 nuevos vacunados por día.</p>
+
+	<div class="total-box">
+      <p class="total-title">Índice de Vacunación</p>
+      <p class="total-number" id="indice-vacunados"></p>
+      <div class="row">
+        <p class="total-subtitle">dosis por 100,000 hab</p>
+      </div>
+    </div>
+
+	<iframe title="Dosis por 100 000 habitantes" aria-label="Barras divididas" id="datawrapper-chart-syDt1" src="https://datawrapper.dwcdn.net/syDt1/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="712"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+	</script>
+
+	<p class="texto-lr">El indicador de cobertura por cada 100.000 habitantes resulta especialmente indicativo del avance que se realiza en las regiones del país, a partir de la población de cada una y de forma más específica. De momento, el índice es bajo a nivel nacional aunque se estima una subida importante hacia el último trimestre del año.</p>
+
+	<div class="total-box">
+      <p class="total-title">Médicos Vacunados</p>
+      <p class="total-number" id="total-vacunados-medicos">256,000</p>
+      <div class="row">
+        <div class="col-xs-6 border-right">
+          <p class="total-subtitle">Solo primera dosis</p>
+          <p id="solo-primera-dosis">25,000</p>
+        </div>
+        <div class="col-xs-6">
+          <p class="total-subtitle">Con segunda dosis</p>
+          <p id="segunda-dosis">256,000</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Médicos vacunados contra la COVID-19</h3>
+
+	<p class="texto-lr">Los médicos son parte de la población que se vacunará durante la primera fase de inmunización contra la COVID-19. Durante este período, se espera que 75.026 galenos sean vacunados, según información del CMP.</p>
+
+</div>
+<br>
+<footer style="background-color: #f0f0f0">
+    <div class="w-1000">
+    	<span><strong>Texto:</strong> Alexis Revollé</span>
+    	<span><strong>Desarrollo Web:</strong> Anna Absi</span>
+    	<span><strong>Edición:</strong> Alonso Marín</span>
+		<br/>
+        <span>© Grupo La República </span>
+        <span>Todos los derechos reservados.</span>
+    </div>
+</footer>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-6536106-1"></script>
+<script type="text/javascript" defer>            function gtag() {
+    dataLayer.push(arguments);
+}
+
+(window.dataLayer = window.dataLayer || []), gtag("js", new Date()), gtag("config", "UA-6536106-1");        </script>
+<script>            let btnSocial = document.querySelectorAll(".btn-Social");
+const rss = (nameSocial) => {
+    let link = null;
+    switch (nameSocial) {
+        case "facebook":
+            link = "https://www.facebook.com/sharer/sharer.php?u=";
+            break;
+        case "twitter":
+            link = "https://twitter.com/share?url=";
+            break;
+        default:
+            break;
+    }
+    let url = window.location.href;
+    let text = document.querySelector('meta[name="description"]').content;
+    document.getElementsByClassName("btn-wsp")[0].setAttribute("href", "https://api.whatsapp.com/send?text=" + text + " " + url);
+    const popupText = nameSocial == "twitter" ? "&text=" + text : "";
+    window.open(link + url + popupText, nameSocial + "-popup", "height=350,width=600");
+};
+Object.keys(btnSocial).map((item) => {
+    btnSocial[item].onclick = function () {
+        let nameSocial = btnSocial[item].getAttribute("data-social");
+        rss(nameSocial);
+    };
+});        </script>
+<script>            var h = document.getElementById("w-header"), s = document.getElementById("w-section"),
+    sourceLogoMobile = document.getElementById("w-sourceLogoMobile"),
+    sourceLogoDesktop = document.getElementById("w-sourceLogoDesktop"),
+    socialMediaWhite = "https://s3.amazonaws.com/glr-demo/2020/04/13/icons-white-1586816732.svg",
+    socialMediaColor = "https://s3.amazonaws.com/glr-demo/2020/04/13/icons-color-1586815843.svg",
+    srcsetImgWhite = "https://cdn.larepublica.pe/images/content/default/logo-lr.svg",
+    srcImgWhite = "https://cdn.larepublica.pe/images/content/default/logo-lr.svg",
+    srcsetImgRed = "https://cdn.larepublica.pe/images/content/default/logo-lr.svg",
+    srcImgRed = "https://cdn.larepublica.pe/images/content/default/logo-lr.svg";
+
+function getData(o) {
+    fetch(o).then(function (response) {
+        return response.json();
+    }).then(function (myJson) {
+        console.log(myJson.values);
+    }).catch(function (o) {
+        console.log("Hubo un problema con la petición Fetch:" + o.message);
+    });
+}
+
+(document.onscroll = function () {
+    window.scrollY >= 7 || window.pageYOffset >= 7 ? (h.classList.add("sticky-gray"), sourceLogoDesktop.setAttribute("srcset", srcsetImgRed), sourceLogoMobile.setAttribute("src", srcImgRed)) : (h.classList.remove("sticky-gray"), sourceLogoDesktop.setAttribute("srcset", srcsetImgWhite), sourceLogoMobile.setAttribute("src", srcImgWhite));
+}), (window.onload = function () {
+    document.querySelectorAll(".btn-Social");
+});        </script>
+</body>
+</html>

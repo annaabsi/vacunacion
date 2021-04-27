@@ -159,8 +159,7 @@ h4 {
     font-size: 1.8rem;
     font-family: sans-serif;
     width: 100%;
-    margin: 0 auto 25px;
-    max-width: 750px;
+    margin-top: 50px;
 }
 
 h4:before {
@@ -231,9 +230,6 @@ h4 {
     .p-10 {
         padding: 0 10px;
     }
-
-    
-
     header {
         padding: 15px 20px;
     }
@@ -245,6 +241,10 @@ h4 {
     .w-text {
         padding: 0 30px 40px;
         max-width: 100%;
+    }
+    #viz1619104643474 {
+        display: none !important;
+
     }
 
 }
@@ -627,9 +627,6 @@ time {
 iframe {
 	padding: 15px;
 }
-.dw-chart-footer {
-	display: none
-}
 </style>
 <script src="https://d3js.org/d3.v4.js"></script>
 <header id="w-header">
@@ -667,26 +664,6 @@ iframe {
     </div>
 
 </div>
-
-
-<script type="text/javascript">
-d3.csv("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/departamentos.csv", function(data){
-
-    var totalSum = [d3.sum(data.map(function(d){ return d.DOSIS1})),
-       d3.sum(data.map(function(d){ return d.DOSIS2}))];
-    var dataDate = data[0]["FECHA_CORTE"];
-    var dd = dataDate.slice(6,8);
-    var mm = dataDate.slice(4,6);
-    var yyyy = dataDate.slice(0,4);
-    hoy = dd + '/' + mm + '/' + yyyy;
-    var fechaActualizacion = d3.select("#fecha").append("span").text(hoy);
-    var totalVacunados = d3.select("#total-vacunados").append("span").text(totalSum[1].toLocaleString());
-    var primeraDosis = d3.select("#solo-primera-dosis").append("span").text((totalSum[0]-totalSum[1]).toLocaleString());
-    var segundaDosis = d3.select("#segunda-dosis").append("span").text(totalSum[1].toLocaleString());
-    var indiceVacunados = d3.select("#indice-vacunados").append("span").text(Math.round((totalSum[1]/(29381884/100000))).toLocaleString());
-});
-
-</script>
 
 <div id="content__teaser">
 
@@ -729,22 +706,27 @@ d3.csv("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/r
 
 	<div class="total-box">
       <p class="total-title">Médicos Vacunados</p>
-      <p class="total-number" id="total-vacunados-medicos">49,230</p>
+      <p class="total-number" id="total-vacunados-medicos"></p>
       <div class="row">
         <div class="col-xs-6 border-right">
           <p class="total-subtitle">Solo primera dosis</p>
-          <p id="solo-primera-dosis">10,381</p>
+          <p id="m-solo-primera-dosis"></p>
         </div>
         <div class="col-xs-6">
           <p class="total-subtitle">Con segunda dosis</p>
-          <p id="segunda-dosis">49,230</p>
+          <p id="m-segunda-dosis"></p>
         </div>
       </div>
     </div>
 
     <h3>Médicos vacunados contra la COVID-19</h3>
 
-	<p class="texto-lr">Los médicos son parte de la población que se vacunará durante la primera fase de inmunización contra la COVID-19. Durante este período, se espera que 75.026 galenos sean vacunados, según información del CMP.</p>
+    <p class="texto-lr">Los médicos son parte de la población que se vacunará durante la primera fase de inmunización contra la COVID-19. Durante este período, se espera que 75.026 galenos sean vacunados, según información del CMP.</p>
+
+    <!--<div class='tableauPlaceholder' id='viz1619104643474' style='position: relative; margin: auto;'><noscript><a href='#'><img alt='VacunaCMP ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;VacunaCovid_CMP&#47;VacunaCMP&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='VacunaCovid_CMP&#47;VacunaCMP' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;VacunaCovid_CMP&#47;VacunaCMP&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1619104643474');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1100px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1100px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='1627px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>-->
+
+    <h4 style="font-style: italic; text-align: right; font-weight: normal;"></h4>
+    <p class="texto-lr"><b>Datos:</b><br><i><a href="https://www.datosabiertos.gob.pe/dataset/vacunaci%C3%B3n-contra-covid-19-ministerio-de-salud-minsa">Vacunación contra COVID-19 - MINSA</a><br><a href="https://www.cmp.org.pe/vacunometro-cmp/">Vacunómetro CMP</a><br>Web scraping: <a href="https://github.com/ZurMaD">Pablo Dz</a></i></p>
 
 </div>
 <br>
@@ -814,5 +796,32 @@ function getData(o) {
 }), (window.onload = function () {
     document.querySelectorAll(".btn-Social");
 });        </script>
+
+<script type="text/javascript">
+d3.csv("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/departamentos.csv", function(data){
+
+    var totalSum = [d3.sum(data.map(function(d){ return d.DOSIS1})),
+       d3.sum(data.map(function(d){ return d.DOSIS2}))];
+    var dataDate = data[0]["FECHA_CORTE"];
+    var dd = dataDate.slice(6,8);
+    var mm = dataDate.slice(4,6);
+    var yyyy = dataDate.slice(0,4);
+    hoy = dd + '/' + mm + '/' + yyyy;
+    var fechaActualizacion = d3.select("#fecha").append("span").text(hoy);
+    var totalVacunados = d3.select("#total-vacunados").append("span").text(totalSum[1].toLocaleString());
+    var primeraDosis = d3.select("#solo-primera-dosis").append("span").text((totalSum[0]-totalSum[1]).toLocaleString());
+    var segundaDosis = d3.select("#segunda-dosis").append("span").text(totalSum[1].toLocaleString());
+    var indiceVacunados = d3.select("#indice-vacunados").append("span").text(Math.round((totalSum[1]/(29381884/100000))).toLocaleString());
+});
+
+d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/ambas_dosis.json", function (d) {
+    var totalVacunados = d3.select("#total-vacunados-medicos").append("span").text(d["dosis2"].toLocaleString());
+    var primeraDosis = d3.select("#m-solo-primera-dosis").append("span").text((d["dosis1"]-d["dosis2"]).toLocaleString());
+    var segundaDosis = d3.select("#m-segunda-dosis").append("span").text(d["dosis2"].toLocaleString());
+    console.log(d["dosis1"]);
+});
+
+</script>
+
 </body>
 </html>

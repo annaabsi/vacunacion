@@ -28,7 +28,7 @@
     <meta name="lang" content="es_PE"/>
     <meta name="author" content="Redacción LR"/>
     <meta name="keywords" content=""/>
-    <title>Avance de la vacunación contra la COVID-19 en Perú</title>
+    <title>Así avanza la vacunación contra la COVID-19 en Perú</title>
 	<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.larepublica.pe/favicon-32x32.png"/>
 </head>
 <body>
@@ -160,9 +160,10 @@ h4 {
     font-family: sans-serif;
     width: 100%;
     margin-top: 50px;
+    max-width: 760px;
 }
 
-h4:before {
+b:before {
 	position: relative;
     width: 40px;
     height: 4px;
@@ -196,14 +197,12 @@ h1 {
 }
 
 .texto-lr {
-    margin: 0 auto 25px;
     line-height: 1.38;
     display: block;
-}
-
-.texto-lr {
     margin: 0 auto 20px;
-    padding: 0 15px;
+    padding: 25px 15px;
+    max-width: 760px;
+    font-size: 17px;
 }
 
 h1 {
@@ -215,11 +214,13 @@ h2 {
     padding: 0 15px;
     font-size: 1.8rem;
     margin: 20px auto;
+    max-width: 900px;
 }
 
 h3 {
-    margin: 25px auto 15px;
+    margin: 25px auto 0;
     padding: 0 15px;
+    max-width: 760px;
 }
 
 h4 {
@@ -604,8 +605,7 @@ time {
     margin: auto;
     min-width: 250px;
 }
-.col-xs-6 {
-	width: 48%;
+.col-xs-12 {
     display: inline-block;
     margin-top: 15px;
     font-size: 14px;
@@ -627,6 +627,13 @@ time {
 iframe {
 	padding: 15px;
 }
+small {
+    margin: auto;
+    display: block;
+    max-width: 440px;
+    margin-top: -10px;
+    font-size: 12px;
+}
 </style>
 <script src="https://d3js.org/d3.v4.js"></script>
 <header id="w-header">
@@ -644,84 +651,83 @@ iframe {
     </div>
 </header>
 
-<div id="content__main"><h1 style="text-align: center;">Avance de la vacunación contra la COVID-19 en Perú</h1>
+<div id="content__main"><h1 style="text-align: center;">Así avanza la vacunación contra la COVID-19 en Perú</h1>
 
-    <h2 style="text-align: center;">En febrero se inició la distribución de dosis para enfrentar el avance de la pandemia. Así evoluciona la cobertura a nivel nacional.</h2>
+    <h2 style="text-align: center;">En febrero de 2021, comenzó la distribución de dosis para enfrentar la pandemia del coronavirus en nuestro país. Este especial, elaborado en base a la plataforma de Datos Abiertos del Ministerio de Salud (Minsa) muestra cómo evoluciona la cobertura en todas las regiones.</h2>
     <p id="fecha">Reporte actualizado al: </p>
     <div class="total-box">
-      <p class="total-title">Total vacunación completa</p>
+      <p class="total-title">Total vacunación completa*</p>
       <p class="total-number" id="total-vacunados"></p>
       <div class="row">
-        <div class="col-xs-6 border-right">
+        <div class="col-xs-12">
           <p class="total-subtitle">Solo primera dosis</p>
           <p id="solo-primera-dosis"></p>
         </div>
-        <div class="col-xs-6">
-          <p class="total-subtitle">Con segunda dosis</p>
-          <p id="segunda-dosis"></p>
-        </div>
       </div>
     </div>
+    <small>
+    *Para este informe, cuando mencionamos ‘vacunación completa’ nos referimos a quienes hayan recibido ambas dosis de la vacuna contra la COVID-19. 
+    </small>
+    
 
 </div>
 
 <div id="content__teaser">
 
     <div class="col-6">
-    	<iframe title="Avance por región" aria-label="Mapa" id="datawrapper-chart-aljw1" src="https://datawrapper.dwcdn.net/aljw1/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="539"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-			</script>
+    	<iframe title="Avance por región" aria-label="Mapa" id="datawrapper-chart-aljw1" src="https://datawrapper.dwcdn.net/aljw1/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="593"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+            </script>
     </div>
     <div class="col-6">
-    	<iframe title="Avance por región" aria-label="chart" id="datawrapper-chart-HxPlI" src="https://datawrapper.dwcdn.net/HxPlI/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="788"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-			</script>
+    	<iframe title="Avance por región" aria-label="table" id="datawrapper-chart-HxPlI" src="https://datawrapper.dwcdn.net/HxPlI/8/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="771"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+            </script>
     </div>
 
-    <p class="texto-lr">Un primer lote de 300.000 vacunas, desarrolladas por el laboratorio chino Shinopharm, llegó al Perú el 7 de febrero. Desde entonces se ha puesto en marcha la distribución nacional del fármaco en el marco de la Fase 1 de inmunización, cuyo objetivo principal es vacunar a personal de salud que se encuentra en primera línea de atención contra la COVID-19, según informó el Minsa. Hasta el momento, la región donde más personas recibieron la primera dosis es Lima.</p>
-
-    <p class="texto-lr">Cabe aclarar que la vacunación completa consta de dos dosis, por lo que se espera que la cobertura de la Fase 1 se vaya completando a lo largo del primer trimestre de 2021. El presidente Francisco Sagasti estimó, por su parte, que 10 millones de peruanos estarían vacunados antes del 28 de julio.</p>
-
-
-    <iframe title="Vacunados por día y acumulado (1era Dosis)" aria-label="Interactive line chart" id="datawrapper-chart-eldOi" src="https://datawrapper.dwcdn.net/eldOi/8/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-		</script>
     <br>
-    <iframe title="Vacunados por día y acumulado (2da Dosis)" aria-label="Interactive line chart" id="datawrapper-chart-0easz" src="https://datawrapper.dwcdn.net/0easz/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-	</script>
+
+    <p class="texto-lr">El 7 de febrero de 2021, arribó al Perú un primer lote de 300.000 dosis de vacunas desarrolladas por el laboratorio chino Sinopharm. A partir de esa fecha se puso en marcha la distribución del fármaco en el marco de la Fase 1 de inmunización, que tenía como objetivo inmunizar a personal de salud que se encontraba en primera línea de atención contra la COVID-19.</p>
+
+    <iframe title="Vacunados por día" aria-label="Interactive area chart" id="datawrapper-chart-eldOi" src="https://datawrapper.dwcdn.net/eldOi/11/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+        </script>
+    <br>
+    <iframe title="Acumulado de vacunación" aria-label="Interactive area chart" id="datawrapper-chart-0easz" src="https://datawrapper.dwcdn.net/0easz/9/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+        </script>
 
 	<h3>Avance diario de la vacunación contra la COVID-19</h3>
 
-	<p class="texto-lr">A partir del 9 de febrero, la aplicación de vacuna contra la COVID-19 en el país se incrementa a ritmo acelerado. El primer día, 3449 personas recibieron la primera dosis. Las cifras reportadas por el Minsa indican un crecimiento de, al menos, 3000 nuevos vacunados por día.</p>
+	<p class="texto-lr">A partir del 9 de febrero, la aplicación de la vacuna contra el coronavirus en el país empezó a incrementar su ritmo. Solo el primer día, 3449 personas recibieron la primera dosis del fármaco.</p>
 
 	<div class="total-box">
       <p class="total-title">Índice de Vacunación</p>
       <p class="total-number" id="indice-vacunados"></p>
       <div class="row">
-        <p class="total-subtitle">dosis por 100,000 hab</p>
+        <p class="total-subtitle">dosis por 100.000 hab.</p>
       </div>
     </div>
 
-	<iframe title="Dosis por 100,000 habitantes" aria-label="Barras divididas" id="datawrapper-chart-syDt1" src="https://datawrapper.dwcdn.net/syDt1/8/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="887"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+    <br>
+
+	<iframe title="Vacunación completa por cada 100.000 habitantes" aria-label="Gráfica de barras" id="datawrapper-chart-syDt1" src="https://datawrapper.dwcdn.net/syDt1/10/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="893"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
         </script>
 
-	<p class="texto-lr">El indicador de cobertura por cada 100.000 habitantes resulta especialmente indicativo del avance que se realiza en las regiones del país, a partir de la población de cada una y de forma más específica. De momento, el índice es bajo a nivel nacional aunque se estima una subida importante hacia el último trimestre del año.</p>
+    <br>
+
+	<p class="texto-lr">El indicador de cobertura por cada 100.000 habitantes resulta especialmente indicativo del avance que se realiza en las regiones del país, a partir de la población de cada una y de forma más específica.</p>
+
+    <h3>Médicos vacunados contra la COVID-19</h3>
+
+    <p class="texto-lr">Los médicos formaron parte de la población que empezó a recibir la vacuna durante la primera fase de inmunización contra la COVID-19.</p>
 
 	<div class="total-box">
       <p class="total-title">Médicos Vacunados</p>
       <p class="total-number" id="total-vacunados-medicos"></p>
       <div class="row">
-        <div class="col-xs-6 border-right">
+        <div class="col-xs-12">
           <p class="total-subtitle">Solo primera dosis</p>
           <p id="m-solo-primera-dosis"></p>
         </div>
-        <div class="col-xs-6">
-          <p class="total-subtitle">Con segunda dosis</p>
-          <p id="m-segunda-dosis"></p>
-        </div>
       </div>
     </div>
-
-    <h3>Médicos vacunados contra la COVID-19</h3>
-
-    <p class="texto-lr">Los médicos son parte de la población que se vacunará durante la primera fase de inmunización contra la COVID-19. Durante este período, se espera que 75.026 galenos sean vacunados, según información del CMP.</p>
 
     <!--<div class='tableauPlaceholder' id='viz1619104643474' style='position: relative; margin: auto;'><noscript><a href='#'><img alt='VacunaCMP ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;VacunaCovid_CMP&#47;VacunaCMP&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='VacunaCovid_CMP&#47;VacunaCMP' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;VacunaCovid_CMP&#47;VacunaCMP&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1619104643474');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1100px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1100px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='1627px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>-->
 
@@ -733,8 +739,8 @@ iframe {
 <footer style="background-color: #f0f0f0">
     <div class="w-1000">
     	<span><strong>Texto:</strong> Alexis Revollé</span>
-    	<span><strong>Desarrollo Web:</strong> Anna Absi</span>
-    	<span><strong>Edición:</strong> Alonso Marín</span>
+    	<span><strong>Desarrollo Web:</strong> Anna Absi y Génesis León</span>
+    	<span><strong>Edición:</strong> Alonso Marín Jiménez</span>
 		<br/>
         <span>© Grupo La República </span>
         <span>Todos los derechos reservados.</span>
@@ -808,17 +814,14 @@ d3.csv("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/r
     var yyyy = dataDate.slice(0,4);
     hoy = dd + '/' + mm + '/' + yyyy;
     var fechaActualizacion = d3.select("#fecha").append("span").text(hoy);
-    var totalVacunados = d3.select("#total-vacunados").append("span").text(totalSum[1].toLocaleString());
-    var primeraDosis = d3.select("#solo-primera-dosis").append("span").text((totalSum[0]-totalSum[1]).toLocaleString());
-    var segundaDosis = d3.select("#segunda-dosis").append("span").text(totalSum[1].toLocaleString());
-    var indiceVacunados = d3.select("#indice-vacunados").append("span").text(Math.round((totalSum[1]/(29381884/100000))).toLocaleString());
+    var totalVacunados = d3.select("#total-vacunados").append("span").text(totalSum[1].toLocaleString('id-ID'));
+    var primeraDosis = d3.select("#solo-primera-dosis").append("span").text((totalSum[0]-totalSum[1]).toLocaleString('id-ID'));
+    var indiceVacunados = d3.select("#indice-vacunados").append("span").text(Math.round((totalSum[1]/(29381884/100000))).toLocaleString('id-ID'));
 });
 
 d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/ambas_dosis.json", function (d) {
-    var totalVacunados = d3.select("#total-vacunados-medicos").append("span").text(d["dosis2"].toLocaleString());
-    var primeraDosis = d3.select("#m-solo-primera-dosis").append("span").text((d["dosis1"]-d["dosis2"]).toLocaleString());
-    var segundaDosis = d3.select("#m-segunda-dosis").append("span").text(d["dosis2"].toLocaleString());
-    console.log(d["dosis1"]);
+    var totalVacunadosM = d3.select("#total-vacunados-medicos").append("span").text(d["dosis2"].toLocaleString('id-ID'));
+    var primeraDosisM = d3.select("#m-solo-primera-dosis").append("span").text((d["dosis1"]-d["dosis2"]).toLocaleString('id-ID'));
 });
 
 </script>

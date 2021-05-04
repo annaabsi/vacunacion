@@ -97,7 +97,7 @@ header span {
 }
 
 header img {
-    width: 240px;
+    width: 140px;
 }
 
 footer span {
@@ -256,7 +256,7 @@ h4 {
     }
 
     header img {
-        width: 300px;
+        width: 160px;
     }
 
     span [class*="btn-"] {
@@ -631,7 +631,9 @@ small {
     margin: auto;
     display: block;
     max-width: 440px;
-    margin-top: -10px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    padding: 0 5px;
     font-size: 12px;
 }
 </style>
@@ -643,8 +645,8 @@ small {
                                    target="_blank">
             <picture>
                 <source id="w-sourceLogoDesktop" media="(min-width: 768px)"
-                        srcset="https://cdn.larepublica.pe/images/content/default/logo-lr.svg"/>
-                <img id="w-sourceLogoMobile" src="https://cdn.larepublica.pe/images/content/default/logo-lr.svg"/>
+                        srcset="https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg"/>
+                <img id="w-sourceLogoMobile" src="https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg"/>
             </picture>
         </a></div>
         <div class="menu__rigth"><span class="items_shared"> <a class="btn-fb btn-Social" data-social="facebook" href="javascript:void(0)" id="id-btn-fb" rel="noopener"> </a> <a class="btn-twt btn-Social" data-social="twitter" href="javascript:void(0)" id="id-btn-twt" rel="noopener"> </a> <a class="btn-wsp" href="https://api.whatsapp.com/send?text=https://especiales.larepublica.pe/" id="id-btn-wsp" rel="noopener" target="_blank"> </a> </span></div>
@@ -782,10 +784,10 @@ Object.keys(btnSocial).map((item) => {
     sourceLogoDesktop = document.getElementById("w-sourceLogoDesktop"),
     socialMediaWhite = "https://s3.amazonaws.com/glr-demo/2020/04/13/icons-white-1586816732.svg",
     socialMediaColor = "https://s3.amazonaws.com/glr-demo/2020/04/13/icons-color-1586815843.svg",
-    srcsetImgWhite = "https://cdn.larepublica.pe/images/content/default/logo-lr.svg",
-    srcImgWhite = "https://cdn.larepublica.pe/images/content/default/logo-lr.svg",
-    srcsetImgRed = "https://cdn.larepublica.pe/images/content/default/logo-lr.svg",
-    srcImgRed = "https://cdn.larepublica.pe/images/content/default/logo-lr.svg";
+    srcsetImgWhite = "https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg",
+    srcImgWhite = "https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg",
+    srcsetImgRed = "https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg",
+    srcImgRed = "https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg";
 
 function getData(o) {
     fetch(o).then(function (response) {

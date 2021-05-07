@@ -11,18 +11,18 @@
     <meta name="robots" content="index,follow"/>
     <meta name="googlebot" content="index, follow"/>
     <meta name="description"
-          content="En febrero de 2021, comenzó la distribución de dosis para enfrentar la pandemia del coronavirus en nuestro país. Este especial, elaborado en base a la plataforma de Datos Abiertos del Ministerio de Salud (Minsa) muestra cómo evoluciona la cobertura en todas las regiones."/>
+          content="En febrero de 2021, comenzó la distribución de dosis para enfrentar la pandemia del coronavirus en nuestro país. Este especial, elaborado en base a la plataforma de Datos Abiertos del Gobierno muestra cómo evoluciona la cobertura en todas las regiones."/>
     <meta property="og:url" content="https://especiales.larepublica.pe/"/>
     <meta property="og:title" content="Así avanza la vacunación contra la COVID-19 en Perú"/>
-    <meta property="og:image" content="image.jpg"/>
+    <meta property="og:image" content="https://origin.cronosmedia.glr.pe/large/2021/05/06/lg_6094139301b31e1e871ace5e.jpg"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta property="fb:pages" content="94604237016"/>
     <meta property="fb:app_id" content="489210501129201"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@larepublica_pe"/>
     <meta name="twitter:title" content="Así avanza la vacunación contra la COVID-19 en Perú"/>
-    <meta name="twitter:description" content="En febrero de 2021, comenzó la distribución de dosis para enfrentar la pandemia del coronavirus en nuestro país. Este especial, elaborado en base a la plataforma de Datos Abiertos del Ministerio de Salud (Minsa) muestra cómo evoluciona la cobertura en todas las regiones."/>
-    <meta name="twitter:image" content="image.jpg"/>
+    <meta name="twitter:description" content="En febrero de 2021, comenzó la distribución de dosis para enfrentar la pandemia del coronavirus en nuestro país. Este especial, elaborado en base a la plataforma de Datos Abiertos del Gobierno muestra cómo evoluciona la cobertura en todas las regiones."/>
+    <meta name="twitter:image" content="https://origin.cronosmedia.glr.pe/large/2021/05/06/lg_6094139301b31e1e871ace5e.jpg"/>
     <meta name="distribution" content="global"/>
     <meta name="rating" content="general"/>
     <meta name="lang" content="es_PE"/>
@@ -89,7 +89,8 @@ header {
     z-index: 2;
     transition: all 0.5s ease;
     padding: 15px 42px;
-    background: #ff0102;
+    background: lightgrey;
+    border-bottom: 4px solid #fe0404;
 }
 
 header span {
@@ -594,6 +595,10 @@ time {
     font-size: 40px;
     font-weight: bold;
 }
+.total-number-sub {
+    font-size: 20px;
+    font-weight: bold;
+}
 .total-subtitle {
     margin: 0;
     font-weight: bold;
@@ -607,7 +612,6 @@ time {
     min-width: 250px;
 }
 .col-xs-12 {
-    display: inline-block;
     margin-top: 15px;
     font-size: 14px;
     padding: 5px;
@@ -646,8 +650,8 @@ small {
                                    target="_blank">
             <picture>
                 <source id="w-sourceLogoDesktop" media="(min-width: 768px)"
-                        srcset="https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg"/>
-                <img id="w-sourceLogoMobile" src="https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg"/>
+                        srcset="logo.png"/>
+                <img id="w-sourceLogoMobile" src="logo.png"/>
             </picture>
         </a></div>
         <div class="menu__rigth"><span class="items_shared"> <a class="btn-fb btn-Social" data-social="facebook" href="javascript:void(0)" id="id-btn-fb" rel="noopener"> </a> <a class="btn-twt btn-Social" data-social="twitter" href="javascript:void(0)" id="id-btn-twt" rel="noopener"> </a> <a class="btn-wsp" href="https://api.whatsapp.com/send?text=https://especiales.larepublica.pe/" id="id-btn-wsp" rel="noopener" target="_blank"> </a> </span></div>
@@ -656,15 +660,19 @@ small {
 
 <div id="content__main"><h1 style="text-align: center;">Así avanza la vacunación contra la COVID-19 en Perú</h1>
 
-    <h2 style="text-align: center;">En febrero de 2021, comenzó la distribución de dosis para enfrentar la pandemia del coronavirus en nuestro país. Este especial, elaborado en base a la plataforma de Datos Abiertos del Ministerio de Salud (Minsa) muestra cómo evoluciona la cobertura en todas las regiones.</h2>
+    <h2 style="text-align: center;">En febrero de 2021, comenzó la distribución de dosis para enfrentar la pandemia del coronavirus en nuestro país. Este especial, elaborado en base a la plataforma de Datos Abiertos del Gobierno muestra cómo evoluciona la cobertura en todas las regiones.</h2>
     <p id="fecha">Reporte actualizado al: </p>
     <div class="total-box">
       <p class="total-title">Total vacunación completa*</p>
-      <p class="total-number" id="total-vacunados"></p>
+      <p class="total-number"><span id="total-vacunados"></span><span class="total-number-sub"> personas</span></p>
       <div class="row">
         <div class="col-xs-12">
           <p class="total-subtitle">Solo primera dosis</p>
-          <p id="solo-primera-dosis"></p>
+          <p><span id="solo-primera-dosis"></span> personas</p>
+        </div>
+        <div class="col-xs-12">
+          <p class="total-subtitle">Total dosis aplicadas</p>
+          <p><span id="total-dosis"></span> dosis</p>
         </div>
       </div>
     </div>
@@ -711,7 +719,7 @@ small {
       <p class="total-title">Índice de Vacunación</p>
       <p class="total-number" id="indice-vacunados"></p>
       <div class="row">
-        <p class="total-subtitle">dosis por 100.000 hab.</p>
+        <p class="total-subtitle">vacunación completa por 100.000 hab.</p>
       </div>
     </div>
 
@@ -723,11 +731,11 @@ small {
 
 	<div class="total-box">
       <p class="total-title">Médicos Vacunados</p>
-      <p class="total-number" id="total-vacunados-medicos"></p>
+      <p class="total-number"><span id="total-vacunados-medicos"></span><span class="total-number-sub"></span></p>
       <div class="row">
         <div class="col-xs-12">
           <p class="total-subtitle">Solo primera dosis</p>
-          <p id="m-solo-primera-dosis"></p>
+          <p><span id="m-solo-primera-dosis"></span><span> médicos</span></p>
         </div>
       </div>
     </div>
@@ -743,7 +751,7 @@ small {
     <div class="w-1000">
     	<span><strong>Texto:</strong> Alexis Revollé</span>
     	<span><strong>Desarrollo Web:</strong> Anna Absi y Génesis León</span>
-    	<span><strong>Edición:</strong> Alonso Marín Jiménez</span>
+    	<span><strong>Edición general:</strong> Alonso Marín Jiménez</span>
 		<br/>
         <span>© Grupo La República </span>
         <span>Todos los derechos reservados.</span>
@@ -785,10 +793,10 @@ Object.keys(btnSocial).map((item) => {
     sourceLogoDesktop = document.getElementById("w-sourceLogoDesktop"),
     socialMediaWhite = "https://s3.amazonaws.com/glr-demo/2020/04/13/icons-white-1586816732.svg",
     socialMediaColor = "https://s3.amazonaws.com/glr-demo/2020/04/13/icons-color-1586815843.svg",
-    srcsetImgWhite = "https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg",
-    srcImgWhite = "https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg",
-    srcsetImgRed = "https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg",
-    srcImgRed = "https://s3.amazonaws.com/glr-demo/2020/04/14/logo-lrdata-mobile-1586898504.svg";
+    srcsetImgWhite = "logo.png",
+    srcImgWhite = "logo.png",
+    srcsetImgRed = "logo.png",
+    srcImgRed = "logo.png";
 
 function getData(o) {
     fetch(o).then(function (response) {
@@ -820,6 +828,7 @@ d3.csv("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/r
     var totalVacunados = d3.select("#total-vacunados").append("span").text(totalSum[1].toLocaleString('id-ID'));
     var primeraDosis = d3.select("#solo-primera-dosis").append("span").text((totalSum[0]-totalSum[1]).toLocaleString('id-ID'));
     var indiceVacunados = d3.select("#indice-vacunados").append("span").text(Math.round((totalSum[1]/(29381884/100000))).toLocaleString('id-ID'));
+    var totalDosis = d3.select("#total-dosis").append("span").text((totalSum[0]+totalSum[1]).toLocaleString('id-ID'));
 });
 
 d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/ambas_dosis.json", function (d) {

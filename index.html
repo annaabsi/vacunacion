@@ -638,7 +638,7 @@ small {
     margin: auto;
     display: block;
     max-width: 440px;
-    margin-top: -5px;
+    margin-top: -15px;
     margin-bottom: 20px;
     padding: 0 5px;
     font-size: 12px;
@@ -856,7 +856,10 @@ d3.csv("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/r
 d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/ambas_dosis.json", function (d) {
     var totalVacunadosM = d3.select("#total-vacunados-medicos").append("span").text(d["dosis2"].toLocaleString('id-ID'));
     var primeraDosisM = d3.select("#m-solo-primera-dosis").append("span").text((d["dosis1"]-d["dosis2"]).toLocaleString('id-ID'));
-    var dataDate = d["actualizado"];
+});
+
+d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/fecha_corte.json", function (d) {
+    var dataDate = d["fecha_corte"].toString();
     var dd = dataDate.slice(6,8);
     var mm = dataDate.slice(4,6);
     var yyyy = dataDate.slice(0,4);

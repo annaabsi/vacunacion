@@ -30,13 +30,10 @@
     <meta name="keywords" content=""/>
     <title>Así avanza la vacunación contra la COVID-19 en Perú</title>
 	<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.larepublica.pe/favicon-32x32.png"/>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5XDRN5K');</script>
-    <!-- End Google Tag Manager -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </head>
 <body>
 <style type="text/css">
@@ -148,6 +145,7 @@ h1 {
     font-size: 5.5rem;
     line-height: 1.3;
     margin-bottom: 3rem;
+    font-weight: bold;
 }
 
 h2 {
@@ -157,10 +155,11 @@ h2 {
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-family: sans-serif;
     width: 100%;
     margin: auto;
+    font-weight: bold;
 }
 
 h4 {
@@ -579,18 +578,11 @@ time {
     .items__menu {
         display: block;
     }
-    .col-6 {
-		width: 49%;
-	    display: inline-block;
-	    margin-top: 15px;
-	    font-size: 14px;
-	    padding: 5px;
-	}
 }
 .total-box {
     text-align: center;
     background-color: #eee;
-    padding: 20px;
+    padding: 15px;
     margin: 25px auto;
     max-width: 450px;
 }
@@ -598,11 +590,13 @@ time {
     font-size: 28px;
     font-weight: bold;
     color: red;
-    margin: 0;
+    line-height: 1;
 }
 .total-number {
     font-size: 40px;
     font-weight: bold;
+    line-height: 40px;
+    margin-bottom: 0;
 }
 .total-number-sub {
     font-size: 20px;
@@ -620,11 +614,6 @@ time {
     margin: auto;
     min-width: 250px;
 }
-.col-xs-12 {
-    margin-top: 15px;
-    font-size: 14px;
-    padding: 5px;
-}
 .border-right {
 	border-right: 1px solid black;
 }
@@ -638,9 +627,6 @@ time {
 	max-width: 1440px;
 	margin: auto;
 }
-iframe {
-	padding: 15px;
-}
 small {
     margin: auto;
     display: block;
@@ -649,6 +635,17 @@ small {
     margin-bottom: 20px;
     padding: 0 5px;
     font-size: 12px;
+    line-height: 1;
+}
+.row span {
+    font-size: 14px;
+}
+a {
+    color: #212529;
+}
+.h3-graficas {
+    max-width: initial;
+    padding-bottom: 0;
 }
 </style>
 <script src="https://d3js.org/d3.v4.js"></script>
@@ -671,10 +668,10 @@ small {
 
     <h2 style="text-align: center;">En febrero de 2021 comenzó la distribución de dosis para enfrentar la pandemia del coronavirus en nuestro país. Este especial, elaborado en base a la plataforma de Datos Abiertos del Gobierno, muestra cómo evoluciona la cobertura en todas las regiones.</h2>
     <p id="fecha">Reporte actualizado al: </p>
-    <div class="total-box">
+    <div class="total-box pt-5">
       <p class="total-title">Total vacunación completa*</p>
       <p class="total-number"><span id="total-vacunados"></span><span class="total-number-sub"> personas</span></p>
-      <div class="row">
+      <div class="row mt-3">
         <div class="col-xs-12">
           <p class="total-subtitle">Solo primera dosis</p>
           <p><span id="solo-primera-dosis"></span> personas</p>
@@ -693,14 +690,15 @@ small {
 </div>
 
 <div id="content__teaser">
-
-    <div class="col-6">
-    	<iframe title="Avance por región" aria-label="Mapa" id="datawrapper-chart-aljw1" src="https://datawrapper.dwcdn.net/aljw1/11/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="593"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-            </script>
-    </div>
-    <div class="col-6">
-    	<iframe title="Avance por región" aria-label="table" id="datawrapper-chart-HxPlI" src="https://datawrapper.dwcdn.net/HxPlI/11/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="771"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-            </script>
+    <div class="row">
+        <div class="col-md-6 p-5">
+            <iframe title="Avance por región" aria-label="Mapa" id="datawrapper-chart-aljw1" src="https://datawrapper.dwcdn.net/aljw1/11/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="593"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+                </script>
+        </div>
+        <div class="col-md-6 p-5">
+            <iframe title="Avance por región" aria-label="table" id="datawrapper-chart-HxPlI" src="https://datawrapper.dwcdn.net/HxPlI/11/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="771"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+                </script>
+        </div>
     </div>
 
     <p class="texto-lr">Este mapa interactivo muestra la situación actual de la distribución de vacunas en cada región del país. Se toman en cuenta personas inmunizadas con la vacunación completa, es decir, que hayan recibido las dos dosis. Para medir el porcentaje de avance en relación a la población de cada una, se usan datos estimados del Instituto Nacional de Estadística e Informática (INEI) a junio de 2020.</p>
@@ -709,11 +707,68 @@ small {
 
     <br>
 
-    <iframe title="Vacunados por día" aria-label="Interactive area chart" id="datawrapper-chart-eldOi" src="https://datawrapper.dwcdn.net/eldOi/12/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-        </script>
-    <br>
-    <iframe title="Acumulado de vacunación" aria-label="Interactive area chart" id="datawrapper-chart-0easz" src="https://datawrapper.dwcdn.net/0easz/10/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-        </script>
+    <h3 class="h3-graficas">Vacunados por día</h3>
+
+    <div class="p-4">
+        <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="active btn btn-outline-primary btn-lg me-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-a" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Total</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-outline-primary btn-lg me-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-b" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Por dosis</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-outline-primary btn-lg" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-c" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Por fabricante</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <!-- <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <iframe title="Vacunados por día (Copy)" aria-label="Interactive area chart" id="datawrapper-chart-EdyCI" src="https://datawrapper.dwcdn.net/EdyCI/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+          </div> -->
+          <div class="tab-pane fade show active" id="pills-a" role="tabpanel" aria-labelledby="pills-home-tab">
+            <iframe title="Vacunados por día (Total)" aria-label="Interactive area chart" id="datawrapper-chart-EdyCI" src="https://datawrapper.dwcdn.net/EdyCI/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+          </div>
+          <div class="tab-pane fade" id="pills-b" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <iframe title="Vacunados por día (Por dosis)" aria-label="Interactive area chart" id="datawrapper-chart-eldOi" src="https://datawrapper.dwcdn.net/eldOi/14/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+          </div>
+          <div class="tab-pane fade" id="pills-c" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <iframe title="Vacunados por día (Por fabricante)" aria-label="Interactive area chart" id="datawrapper-chart-ECTR9" src="https://datawrapper.dwcdn.net/ECTR9/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+          </div>
+        </div>
+    </div>
+
+    <h3 class="h3-graficas">Acumulado de vacunación</h3>
+
+    <div class="p-4">
+        <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="active btn btn-outline-primary btn-lg me-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-d" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Total</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-outline-primary btn-lg me-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-e" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Por dosis</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-outline-primary btn-lg" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-f" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Por fabricante</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <!-- <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <iframe title="Acumulado de vacunación (Por fabricante)" aria-label="Interactive area chart" id="datawrapper-chart-kr8xX" src="https://datawrapper.dwcdn.net/kr8xX/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+          </div> -->
+          <div class="tab-pane fade show active" id="pills-d" role="tabpanel" aria-labelledby="pills-home-tab">
+            <iframe title="Acumulado de vacunación (Total)" aria-label="Interactive area chart" id="datawrapper-chart-VFR2C" src="https://datawrapper.dwcdn.net/VFR2C/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+          </div>
+          <div class="tab-pane fade" id="pills-e" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <iframe title="Acumulado de vacunación (Por dosis)" aria-label="Interactive area chart" id="datawrapper-chart-0easz" src="https://datawrapper.dwcdn.net/0easz/12/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+          </div>
+          <div class="tab-pane fade" id="pills" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <iframe title="Acumulado de vacunación (Por fabricante)" aria-label="Interactive area chart" id="datawrapper-chart-kr8xX" src="https://datawrapper.dwcdn.net/kr8xX/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+          </div>
+          <div class="tab-pane fade" id="pills-f" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <iframe title="Acumulado de vacunación (Por fabricante)" aria-label="Interactive area chart" id="datawrapper-chart-kr8xX" src="https://datawrapper.dwcdn.net/kr8xX/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+          </div>
+        </div>
+    </div>
 
 	<h3>Avance diario de la vacunación contra la COVID-19</h3>
 
@@ -725,16 +780,17 @@ small {
 
     <br>
 
-	<iframe title="Vacunación completa por cada 100.000 habitantes" aria-label="Barras apiladas" id="datawrapper-chart-syDt1" src="https://datawrapper.dwcdn.net/syDt1/13/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="864"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-        </script>
+    <div class="p-4">
+        <iframe title="Vacunación completa por cada 100.000 habitantes" aria-label="Barras apiladas" id="datawrapper-chart-syDt1" src="https://datawrapper.dwcdn.net/syDt1/13/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="864"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();</script>
+    </div>
 
     <br>
 
-    <div class="total-box">
+    <div class="total-box py-5">
       <p class="total-title">Índice de Vacunación</p>
-      <p class="total-number" id="indice-vacunados"></p>
+      <p class="total-number"><span id="indice-vacunados"></span><span class="total-number-sub"> personas</span></p>
       <div class="row">
-        <p class="total-subtitle">vacunación completa por 100.000 hab.</p>
+        <p class="total-subtitle">con vacunación completa por 100.000 hab.</p>
       </div>
     </div>
 
@@ -748,7 +804,7 @@ small {
 
     <p class="texto-lr">Las cifras actualizadas que se muestran en esta gráfica se basan en datos proporcionados por el Colegio Médico del Perú (CMP). Hasta la fecha, la mayor parte de médicos con vacunación completa tienen entre 30 y 59 años. Se trata del grupo etario más expuesto durante la crisis sanitaria.</p>
 
-	<div class="total-box">
+	<div class="total-box pt-5">
       <p class="total-title">Médicos Vacunados</p>
       <p class="total-number"><span id="total-vacunados-medicos"></span><span class="total-number-sub"></span></p>
       <div class="row">
@@ -761,34 +817,10 @@ small {
 
     <p class="texto-lr"></p>
 
-    <iframe title="Vacunación completa por Grupo Etario" aria-label="Barras divididas" id="datawrapper-chart-mTOR4" src="https://datawrapper.dwcdn.net/mTOR4/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="300"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-    </script>
-
-    <p class="texto-lr"></p>
-
-    <iframe title="Vacunación completa por Grupo Etario" aria-label="Gráfico de columnas" id="datawrapper-chart-chqiT" src="https://datawrapper.dwcdn.net/chqiT/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++)t[r].contentWindow===e.source&&(t[r].style.height=e.data["datawrapper-height"][a]+"px")}}))}();
-    </script>
-
-    <p class="texto-lr"></p>
-
-    <iframe title="Vacunación completa por Grupo Etario" aria-label="Gráfica de flechas" id="datawrapper-chart-GrrBd" src="https://datawrapper.dwcdn.net/GrrBd/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="268"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++)t[r].contentWindow===e.source&&(t[r].style.height=e.data["datawrapper-height"][a]+"px")}}))}();
-    </script>
-
-    <p class="texto-lr"></p>
-
-    <iframe title="Vacunación completa por Grupo Etario" aria-label="Gráfica de rangos" id="datawrapper-chart-7nDQj" src="https://datawrapper.dwcdn.net/7nDQj/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="268"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-    </script>
-
-    <p class="texto-lr"></p>
-
-    <iframe title="Dosis diarias por fabricante" aria-label="Interactive area chart" id="datawrapper-chart-ECTR9" src="https://datawrapper.dwcdn.net/ECTR9/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-    </script>
-
-    <p class="texto-lr"></p>
-
-    <iframe title="Dosis acumuladas por fabricante" aria-label="Interactive area chart" id="datawrapper-chart-kr8xX" src="https://datawrapper.dwcdn.net/kr8xX/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-    </script>
-
+    <div class="p-4">
+        <iframe title="Vacunación completa por Grupo Etario" aria-label="Gráfica de rangos" id="datawrapper-chart-7nDQj" src="https://datawrapper.dwcdn.net/7nDQj/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="268"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+        </script>
+    </div>
 
     <!--<div class='tableauPlaceholder' id='viz1619104643474' style='position: relative; margin: auto;'><noscript><a href='#'><img alt='VacunaCMP ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;VacunaCovid_CMP&#47;VacunaCMP&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='VacunaCovid_CMP&#47;VacunaCMP' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;VacunaCovid_CMP&#47;VacunaCMP&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1619104643474');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1100px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1100px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='1627px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>-->
 

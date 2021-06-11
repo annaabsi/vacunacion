@@ -32,6 +32,15 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.larepublica.pe/favicon-32x32.png"/>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.9.1.min.js"
+    ></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/annotations.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="script.js" defer></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </head>
@@ -654,6 +663,76 @@ a {
     border-color: #205597 !important;
     color: #205597;
 }
+.buttons {
+max-width: 325px;
+display: block;
+margin: auto;
+text-align: center;
+}
+button.button {
+text-decoration: none;
+padding: 5px 15px;
+border-radius: 21px;
+text-align: center;
+margin: 0 4px;
+font-size: 14px;
+border-color: #205597;
+background: #fff;
+color: #205597;
+border: 2px solid;
+}
+
+.button.active {
+background: #205597;
+color: #fff;
+}
+.button#total {
+display: block;
+max-width: 155px;
+text-align: center;
+margin: 20px auto;
+}
+#container_fallecidos,
+.highcharts-data-table table {
+min-width: 350px;
+max-width: 800px;
+margin: 1em auto;
+}
+
+#container_fallecidos {
+height: 450px;
+}
+
+.highcharts-data-table table {
+font-family: Verdana, sans-serif;
+border-collapse: collapse;
+border: 1px solid #ebebeb;
+margin: 10px auto;
+text-align: center;
+width: 100%;
+max-width: 500px;
+}
+.highcharts-data-table caption {
+padding: 1em 0;
+font-size: 1.2em;
+color: #555;
+}
+.highcharts-data-table th {
+font-weight: 600;
+padding: 0.5em;
+}
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+padding: 0.5em;
+}
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+background: #f1f7ff;
+}
 </style>
 <script src="https://d3js.org/d3.v4.js"></script>
 <header id="w-header">
@@ -813,12 +892,21 @@ a {
 
     <p class="texto-lr">Así, por ejemplo, se puede determinar cuántas personas, de 100.000, han sido vacunadas en Lima, la región más habitada del país; y así también en la menos habitada, Madre de Dios. De ambas poblaciones —10.628.470 y 173.811 respectivamente—, se toma un mismo número de habitantes y se determina la tasa de inmunización. Con ello, se calcula de forma más fiable el alcance de la vacunación en cada departamento.</p>
 
-    <!-- <h3>Variación de la curva de fallecidos por toda causa</h3>
+    <h3>Variación de la curva de fallecidos por toda causa</h3>
 
     <p class="texto-lr">Mediante esta gráfica, se realiza un seguimiento cronológico a la cifra de muertes diarias por toda causa reportadas en el país desde 2019. Para ello, se utilizan datos del Sistema Informático Nacional de Defunciones (SINADEF). El desarrollo temporal se ha dividido por años a fin de evidenciar el impacto del coronavirus. También se han señalado fechas clave para el análisis, como el inicio de la cuarentena —15 de marzo de 2020— o el comienzo del proceso de vacunación a mayores de 80 años —16 de abril de 2021—, con lo que se busca facilitar la evaluación del efecto que pudieron tener dichas medidas.</p>
     <p class="texto-lr">El comportamiento de la curva de fallecidos da cuenta de un incremento considerable a partir de mayo de 2020, período en que las muertes por COVID-19 empezaron a aumentar su frecuencia. Mientras en 2019 la cifra más alta de muertes registradas en un día —5 de marzo— fue de 360, al año siguiente el pico de mortalidad diaria alcanzó las 1.054 —3 de agosto de 2020. Una muestra contundente de la variación en la curva que significó el estallido de la crisis sanitaria.</p>
     <p class="texto-lr">Con el objetivo de optimizar el análisis, además, esta gráfica permite seleccionar grupos etarios, y de ese modo muestra la curva de mortalidad asociada únicamente a la población fallecida con determinado rango de edad. Otra característica útil de esta herramienta es la plasticidad cronológica. Esto permite al usuario elegir (a través del sombreado con el cursor o ¿con los dedos para móvil?) un periodo determinado de la línea temporal y profundizar en la información recogida.</p>
-    <p class="texto-lr">Por último, una de las finalidades más importantes de este cuadro: determinar si existe un impacto en la curva de mortalidad a raíz del inicio de la vacunación contra la COVID-19, catalogado por algunos expertos como el “efecto vacuna”. Si bien la cifra diaria de fallecidos ha sufrido una tendencia hacia la baja desde abril de 2021, cuando el ritmo de inmunización empezó a acelerarse en el país, sería apresurado afirmar que un “efecto vacuna” está sucediendo en la actualidad. Lo cierto es que, al menos en la población mayor de 80 años, la cantidad de fallecidos se ha reducido notablemente tras la inmunización a más del 60% de dicho grupo etario.</p> -->
+    <p class="texto-lr">Por último, una de las finalidades más importantes de este cuadro: determinar si existe un impacto en la curva de mortalidad a raíz del inicio de la vacunación contra la COVID-19, catalogado por algunos expertos como el “efecto vacuna”. Si bien la cifra diaria de fallecidos ha sufrido una tendencia hacia la baja desde abril de 2021, cuando el ritmo de inmunización empezó a acelerarse en el país, sería apresurado afirmar que un “efecto vacuna” está sucediendo en la actualidad. Lo cierto es que, al menos en la población mayor de 80 años, la cantidad de fallecidos se ha reducido notablemente tras la inmunización a más del 60% de dicho grupo etario.</p>
+
+   <div class="buttons" id="button_fallecidos">
+        <button id="mayor_18" class="button">18-59</button>
+        <button id="mayor_59" class="button">60-69</button>
+        <button id="mayor_69" class="button">70-79</button>
+        <button id="mayor_80" class="button">80+</button>
+        <button id="total" class="button">Todas las edades</button>
+    </div>
+    <div id="container_fallecidos"></div>
 
     <h3>Médicos vacunados contra la COVID-19</h3>
 
@@ -840,7 +928,7 @@ a {
     <!--<div class='tableauPlaceholder' id='viz1619104643474' style='position: relative; margin: auto;'><noscript><a href='#'><img alt='VacunaCMP ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;VacunaCovid_CMP&#47;VacunaCMP&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='VacunaCovid_CMP&#47;VacunaCMP' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;VacunaCovid_CMP&#47;VacunaCMP&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1619104643474');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1100px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1100px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='1627px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>-->
 
     <h4 style="font-style: italic; text-align: right; font-weight: normal;"></h4>
-    <p class="texto-lr"><b>Datos:</b><br><a href="https://github.com/annaabsi/git-scraper-vacunacion">Web Scraping - Anna Absi y Pablo Diaz</a><br><a href="https://www.datosabiertos.gob.pe/dataset/vacunaci%C3%B3n-contra-covid-19-ministerio-de-salud-minsa">Vacunación contra COVID-19 - MINSA</a><br><a href="https://www.cmp.org.pe/vacunometro-cmp/">Vacunómetro CMP</a><br></p>
+    <p class="texto-lr"><b>Datos:</b><br><a href="https://github.com/annaabsi/git-scraper-vacunacion" target="_blank">Web Scraping - Anna Absi, Pablo Díaz, Génesis León</a><br><a href="https://www.datosabiertos.gob.pe/dataset/vacunaci%C3%B3n-contra-covid-19-ministerio-de-salud-minsa" target="_blank">Vacunación contra COVID-19 - MINSA</a><br><a href="https://cloud.minsa.gob.pe/s/NctBnHXDnocgWAg" target="_blank">Fallecidos SINADEF - MINSA</a><br><a href="https://www.cmp.org.pe/vacunometro-cmp/" target="_blank">Vacunómetro CMP</a></p>
 
 </div>
 <br>

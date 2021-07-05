@@ -451,7 +451,7 @@ time {
     	max-width: 720px;
     	margin: 10px auto;
     }
-    #fecha {
+    .fecha {
     	margin: 20px 0 !important;
     }
 }
@@ -626,7 +626,7 @@ time {
 .border-right {
 	border-right: 1px solid black;
 }
-#fecha {
+.fecha {
 	font-size: 16px;
 	font-weight: bold;
 	text-align: center;
@@ -754,7 +754,7 @@ background: #f1f7ff;
 <div id="content__main"><h1 style="text-align: center;">Así avanza la vacunación contra la COVID-19 en Perú</h1>
 
     <h2 style="text-align: center;">En febrero de 2021 comenzó la distribución de dosis para enfrentar la pandemia del coronavirus en nuestro país. Este especial, elaborado en base a la plataforma de Datos Abiertos del Gobierno, muestra cómo evoluciona la cobertura en todas las regiones.</h2>
-    <p id="fecha">Reporte actualizado al: </p>
+    <p class="fecha">Reporte actualizado hoy: <span id="today"></span> </p>
     <div class="total-box pt-5">
       <p class="total-title">Total vacunación completa*</p>
       <p class="total-number"><span id="total-vacunados"></span><span class="total-number-sub"> personas</span></p>
@@ -772,7 +772,7 @@ background: #f1f7ff;
     <small>
     *Para este informe, cuando mencionamos ‘vacunación completa’ nos referimos a quienes hayan recibido ambas dosis de la vacuna contra la COVID-19. 
     </small>
-    
+    <p class="fecha" id="fecha">Gráficas actualizadas al: </p>
 
 </div>
 
@@ -1025,6 +1025,13 @@ d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/
     hoy = dd + '/' + mm + '/' + yyyy;
     var fechaActualizacion = d3.select("#fecha").append("span").text(hoy);
 });
+
+var today = new Date();
+var d = String(today.getDate()).padStart(2, '0');
+var m = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var y = today.getFullYear();
+today = d + '/' + m + '/' + y;
+document.getElementById('today').textContent = today;
 
 </script>
 

@@ -1002,7 +1002,7 @@ function getData(o) {
 });        </script>
 
 <script type="text/javascript">
-d3.csv("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/departamentos.csv", function(data){
+/*d3.csv("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/departamentos.csv", function(data){
 
     var totalSum = [d3.sum(data.map(function(d){ return d.DOSIS1})),
        d3.sum(data.map(function(d){ return d.DOSIS2}))];
@@ -1010,6 +1010,16 @@ d3.csv("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/r
     var primeraDosis = d3.select("#solo-primera-dosis").append("span").text((totalSum[0]-totalSum[1]).toLocaleString('id-ID'));
     var indiceVacunados = d3.select("#indice-vacunados").append("span").text(Math.round((totalSum[1]/(29381884/100000))).toLocaleString('id-ID'));
     var totalDosis = d3.select("#total-dosis").append("span").text((totalSum[0]+totalSum[1]).toLocaleString('id-ID'));
+});*/
+
+d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/pongo_el_hombro.json", function (d) {
+    var dosis1 = parseInt(d["total_dosis1"].replace(/,/g, ''));
+    var dosis2 = parseInt(d["total_dosis2"].replace(/,/g, ''));
+    var dosis = parseInt(d["total_dosis"].replace(/,/g, ''));
+    var totalDosis1 = d3.select("#solo-primera-dosis").append("span").text((dosis1-dosis2).toLocaleString('id-ID'));
+    var totalDosis2 = d3.select("#total-vacunados").append("span").text((dosis2).toLocaleString('id-ID'));
+    var totalDosis = d3.select("#total-dosis").append("span").text((dosis).toLocaleString('id-ID'));
+    var indiceVacunados = d3.select("#indice-vacunados").append("span").text(Math.round((dosis2/(29381884/100000))).toLocaleString('id-ID'));
 });
 
 d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/ambas_dosis.json", function (d) {

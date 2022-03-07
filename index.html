@@ -760,8 +760,8 @@ background: #f1f7ff;
       <p class="total-number"><span id="total-vacunados"></span><span class="total-number-sub"> personas</span></p>
       <div class="row mt-3">
         <div class="col-xs-12">
-          <p class="total-subtitle">Solo primera dosis</p>
-          <p><span id="solo-primera-dosis"></span> personas</p>
+          <p class="total-subtitle">Dosis de refuerzo</p>
+          <p><span id="dosis-refuerzo"></span> personas</p>
         </div>
         <div class="col-xs-12">
           <p class="total-subtitle">Total dosis aplicadas</p>
@@ -1062,12 +1062,9 @@ background: #f1f7ff;
 
     <h3>Vacunación completa por grupo etario en Perú</h3>
 
-    <p class="texto-lr">Para analizar el despliegue de la inmunización, se hace necesaria la clasificación de la población apta para vacunarse de acuerdo a sus grupos de edad, llamados también grupos etarios. Esto se debe a que no toda la ciudadanía se encuentra expuesta al mismo nivel de riesgo ante una infección por COVID-19, como han señalado expertos desde el inicio de la pandemia. Por ello, se ha priorizado la aplicación de dosis para adultos mayores, que constituyen el sector más vulnerable.</p>
-
-    <p class="texto-lr">En esta gráfica se mide el avance de la inmunización por grupos etarios, es decir, la situación actual de cada una de estas poblaciones respecto a la vacunación contra la COVID-19. Para ello, se plantea una segmentación de un total de 22.935.533 personas, concebida en siete grupos: de 80 a más (647.355), de 70 a 79 (1.271.842), de 60 a 69 (2.221.241), de 50 a 59 (3.277.134), de 40 a 49 (4.183.174), de 30 a 39 (5.031.117), de 18 a 29 (6.303.670) y de 12 a 17 (3.138.353).</p>
-
-    <p class="texto-lr">Al igual que en el gráfico territorial, en este medidor de avance por grupos de edad se usan datos estimados del Instituto Nacional de Estadística e Informática (INEI) a junio de 2020. La aplicación de dosis se desarrolla en función de la vulnerabilidad asociada al rango de edad, por lo que el Gobierno ha dado prioridad a personas de 80 años a más, luego a quienes se encuentran entre 70 y 79, y así sucesivamente.</p>
-
+    <p class="texto-lr">Para analizar el despliegue de la inmunización, se hace necesaria la clasificación de la población apta para vacunarse de acuerdo a sus grupos de edad, llamados también grupos etarios. Esto se debe a que no toda la ciudadanía se encuentra expuesta al mismo nivel de riesgo ante una infección por COVID-19, como han señalado especialistas desde el inicio de la pandemia. Por ello, en un inicio se priorizó la aplicación de dosis para adultos mayores, que constituyen el sector más vulnerable.</p>
+    <p class="texto-lr">En esta gráfica se mide el avance de la inmunización por grupos etarios, es decir, la situación actual de cada una de estas poblaciones respecto a la vacunación contra la COVID-19. Para ello, se plantea una segmentación de un total de 32.781.250 personas, concebida en ocho grupos: de 80 a más (812.904), de 60 a 79 (3.851.743), de 50 a 59 (3.524.112), de 40 a 49 (4.604.711), de 30 a 39 (5.382.481), de 18 a 29 (6.788.969), de 12 a 17 (3.614.488), y de 5 a 1a (4.201.842).</p>
+    <p class="texto-lr">En este medidor de avance por grupos de edad se usan las poblaciones objetivo consignadas por el propio Ministerio de Salud.</p>
     <div class="p-4">
         <iframe title="Vacunación completa por grupo etario en Perú" aria-label="Gráfica de rangos" id="datawrapper-chart-7nDQj" src="https://datawrapper.dwcdn.net/7nDQj/9/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="233"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
         </script>
@@ -1114,6 +1111,8 @@ background: #f1f7ff;
 <br>
 <footer style="background-color: #f0f0f0">
     <div class="w-1000">
+        <span><strong>Fecha de última modificación:</strong> 07 de marzo de 2022</span>
+        <br/>
     	<span><strong>Texto:</strong> Alexis Revollé</span>
     	<span><strong>Desarrollo Web:</strong> Anna Absi y Génesis León</span>
     	<span><strong>Edición general:</strong> Alonso Marín Jiménez</span>
@@ -1193,9 +1192,12 @@ function getData(o) {
 d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/pongo_el_hombro.json", function (d) {
     var dosis1 = parseInt(d["total_dosis1"].replace(/,/g, ''));
     var dosis2 = parseInt(d["total_dosis2"].replace(/,/g, ''));
+    var dosis3 = parseInt(d["total_dosis3"].replace(/,/g, ''));
     var dosis = parseInt(d["total_dosis"].replace(/,/g, ''));
     var totalDosis1 = d3.select("#solo-primera-dosis").append("span").text((dosis1-dosis2).toLocaleString('id-ID'));
     var totalDosis2 = d3.select("#total-vacunados").append("span").text((dosis2).toLocaleString('id-ID'));
+    var totalDosis3 = d3.select("#dosis-refuerzo").append("span").text((dosis3).toLocaleString('id-ID'));
+
     var totalDosis = d3.select("#total-dosis").append("span").text((dosis).toLocaleString('id-ID'));
     var indiceVacunados = d3.select("#indice-vacunados").append("span").text(Math.round((dosis2/(29381884/100000))).toLocaleString('id-ID'));
 });

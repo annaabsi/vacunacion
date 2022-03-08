@@ -1202,10 +1202,10 @@ d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/
     var indiceVacunados = d3.select("#indice-vacunados").append("span").text(Math.round((dosis2/(29381884/100000))).toLocaleString('id-ID'));
 });
 
-d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/ambas_dosis.json", function (d) {
-    var totalVacunadosM = d3.select("#total-vacunados-medicos").append("span").text(d["dosis2"].toLocaleString('id-ID'));
-    var primeraDosisM = d3.select("#m-solo-primera-dosis").append("span").text((d["dosis1"]-d["dosis2"]).toLocaleString('id-ID'));
-});
+// d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/ambas_dosis.json", function (d) {
+//     var totalVacunadosM = d3.select("#total-vacunados-medicos").append("span").text(d["dosis2"].toLocaleString('id-ID'));
+//     var primeraDosisM = d3.select("#m-solo-primera-dosis").append("span").text((d["dosis1"]-d["dosis2"]).toLocaleString('id-ID'));
+// });
 
 d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/resultados/fecha_corte.json", function (d) {
     var dataDate = d["fecha_corte"].toString();

@@ -756,13 +756,9 @@ background: #f1f7ff;
     <h2 style="text-align: center;">En febrero de 2021 comenzó la distribución de dosis para enfrentar la pandemia del coronavirus en nuestro país. Este especial, elaborado en base a la plataforma de Datos Abiertos del Gobierno, muestra cómo evoluciona la cobertura en todas las regiones.</h2>
     <!-- <p class="fecha">Reporte actualizado hoy: <span id="today"></span> </p> -->
     <div class="total-box pt-5">
-      <p class="total-title">Total vacunación completa*</p>
-      <p class="total-number"><span id="total-vacunados"></span><span class="total-number-sub"> personas</span></p>
+      <p class="total-title">Total con dosis de refuerzo*</p>
+      <p class="total-number"><span id="dosis-refuerzo"></span><span class="total-number-sub"> personas</span></p>
       <div class="row mt-3">
-        <div class="col-xs-12">
-          <p class="total-subtitle">Dosis de refuerzo</p>
-          <p><span id="dosis-refuerzo"></span> personas</p>
-        </div>
         <div class="col-xs-12">
           <p class="total-subtitle">Total dosis aplicadas</p>
           <p><span id="total-dosis"></span> dosis</p>
@@ -771,7 +767,7 @@ background: #f1f7ff;
     </div>
     <p class="fecha" >El reporte y las siguientes gráficas están actualizadas al: <span id="fecha"></span>**</p>
     <small>
-    *Para este informe, cuando mencionamos ‘vacunación completa’ nos referimos a quienes hayan recibido ambas dosis de la vacuna contra la COVID-19. 
+    *Para este informe, cuando mencionamos ‘dosis de refuerzo’ nos referimos a quienes hayan recibido 3 dosis de la vacuna contra la COVID-19. 
     </small>
     <small>** Últimos datos publicados por el MINSA.</small>
 </div>
@@ -801,9 +797,9 @@ background: #f1f7ff;
 
     <p class="texto-lr">El 7 de febrero de 2021, arribó al Perú un primer lote de 300.000 dosis de vacunas desarrolladas por el laboratorio chino Sinopharm. A partir de esa fecha se puso en marcha la distribución del fármaco. El primer objetivo fue inmunizar a personal de salud que se encuentra en primera línea de atención contra la COVID-19.</p>
 
-    <p class="texto-lr">Las gráficas presentadas establecen una línea temporal desde el 9 de febrero, cuando se aplicaron las primeras dosis en nuestro país. Ese día, 3.842 personas la recibieron. Desde entonces, el progreso de vacunación se ha visto condicionado por los acuerdos que ha concretado el Ejecutivo con los laboratorios internacionales Sinopharm, Pfizer y Astrazeneca.</p>
+    <p class="texto-lr">Las gráficas presentadas establecen una línea temporal desde el 9 de febrero, cuando se aplicaron las primeras dosis en nuestro país. Ese día, 3.842 personas la recibieron. Desde entonces, el progreso de vacunación se ha visto condicionado por los acuerdos que ha concretado el Ejecutivo con los laboratorios internacionales Sinopharm, Pfizer, Astrazeneca y Moderna.</p>
 
-    <p class="texto-lr">En las tablas se visualiza el progreso total, así como el diferenciado de la primera y la segunda dosis —que comenzó a administrarse en marzo—, cuyos procesos de aplicación han variado de forma irregular día a día. También se coloca la información sobre dosis aplicadas por laboratorio.</p>
+    <p class="texto-lr">En las tablas se visualiza el progreso total, así como el diferenciado de la primera, la segunda y la tercera dosis, cuyos procesos de aplicación han variado de forma irregular día a día. También se coloca la información sobre dosis aplicadas por laboratorio.</p>
 
     <h3 class="h3-graficas" id="grafica1">Dosis aplicadas por día en Perú</h3>
 
@@ -1060,7 +1056,7 @@ background: #f1f7ff;
 
     <br>
 
-    <h3>Vacunación completa por grupo etario en Perú</h3>
+    <h3>Vacunación por grupo etario</h3>
 
     <p class="texto-lr">Para analizar el despliegue de la inmunización, se hace necesaria la clasificación de la población apta para vacunarse de acuerdo a sus grupos de edad, llamados también grupos etarios. Esto se debe a que no toda la ciudadanía se encuentra expuesta al mismo nivel de riesgo ante una infección por COVID-19, como han señalado especialistas desde el inicio de la pandemia. Por ello, en un inicio se priorizó la aplicación de dosis para adultos mayores, que constituyen el sector más vulnerable.</p>
     <p class="texto-lr">En esta gráfica se mide el avance de la inmunización por grupos etarios, es decir, la situación actual de cada una de estas poblaciones respecto a la vacunación contra la COVID-19. Para ello, se plantea una segmentación de un total de 32.781.250 personas, concebida en ocho grupos: de 80 a más (812.904), de 60 a 79 (3.851.743), de 50 a 59 (3.524.112), de 40 a 49 (4.604.711), de 30 a 39 (5.382.481), de 18 a 29 (6.788.969), de 12 a 17 (3.614.488), y de 5 a 1a (4.201.842).</p>
@@ -1074,13 +1070,13 @@ background: #f1f7ff;
       <p class="total-title">Índice de vacunación en Perú</p>
       <p class="total-number"><span id="indice-vacunados"></span><span class="total-number-sub"> personas</span></p>
       <div class="row">
-        <p class="total-subtitle">con vacunación completa por 100.000 hab. a nivel nacional</p>
+        <p class="total-subtitle">Vacunación con 3 dosis por cada 100.000 habitantes</p>
       </div>
     </div>
 
     <p class="texto-lr">El indicador de cobertura por cada 100.000 habitantes precisa, de forma más específica, el avance de la vacunación tanto a nivel nacional como en las regiones del país, a partir de una medida relacional frecuente en eventos demográficos. Esta variable se utiliza para establecer un parámetro equitativo entre densidades poblacionales diferentes.</p>
 
-    <p class="texto-lr">Así, por ejemplo, se puede determinar cuántas personas, de 100.000, han sido vacunadas en Lima, la región más habitada del país; y así también en la menos habitada, Madre de Dios. De ambas poblaciones —10.628.470 y 173.811 respectivamente—, se toma un mismo número de habitantes y se determina la tasa de inmunización. Con ello, se calcula de forma más fiable el alcance de la vacunación en cada departamento.</p>
+    <p class="texto-lr">Así, por ejemplo, se puede determinar cuántas personas, de 100.000, han sido vacunadas en Lima, la región más habitada del país; y así también en la menos habitada, Madre de Dios. De ambas poblaciones —10.741.923 y 170.503 respectivamente—, se toma un mismo número de habitantes y se determina la tasa de inmunización. Con ello, se calcula de forma más fiable el alcance de la vacunación en cada departamento.</p>
 
     <div class="p-4">
         <iframe title="Vacunación completa por cada 100.000 habitantes" aria-label="Barras apiladas" id="datawrapper-chart-syDt1" src="https://datawrapper.dwcdn.net/syDt1/18/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="864"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
@@ -1093,7 +1089,6 @@ background: #f1f7ff;
     <p class="texto-lr">Mediante esta gráfica, se realiza un seguimiento cronológico a la cifra de muertes diarias por toda causa reportadas en el país desde 2019. Para ello, se utilizan datos del Sistema Informático Nacional de Defunciones (SINADEF). El desarrollo temporal se ha dividido por años a fin de evidenciar el impacto del coronavirus. También se han señalado fechas clave para el análisis, como el inicio de la cuarentena —15 de marzo de 2020— o el comienzo del proceso de vacunación a mayores de 80 años —16 de abril de 2021—, con lo que se busca facilitar la evaluación del efecto que pudieron tener dichas medidas.</p>
     <p class="texto-lr">El comportamiento de la curva de fallecidos da cuenta de un incremento considerable a partir de mayo de 2020, período en que las muertes por COVID-19 empezaron a aumentar su frecuencia. Mientras en 2019 la cifra más alta de muertes registradas en un día —5 de marzo— fue de 360, al año siguiente el pico de mortalidad diaria alcanzó las 1.054 —3 de agosto de 2020. Una muestra contundente de la variación en la curva que significó el estallido de la crisis sanitaria.</p>
     <p class="texto-lr">Con el objetivo de optimizar el análisis, además, esta gráfica permite seleccionar grupos etarios, y de ese modo muestra la curva de mortalidad asociada únicamente a la población fallecida con determinado rango de edad. Otra característica útil de esta herramienta es la plasticidad cronológica. Esto permite al usuario elegir un periodo determinado de la línea temporal y profundizar en la información recogida.</p>
-    <p class="texto-lr">Por último, una de las finalidades más importantes de este cuadro: determinar si existe un impacto en la curva de mortalidad a raíz del inicio de la vacunación contra la COVID-19, catalogado por algunos expertos como el “efecto vacuna”. Si bien la cifra diaria de fallecidos ha sufrido una tendencia hacia la baja desde abril de 2021, cuando el ritmo de inmunización empezó a acelerarse en el país, sería apresurado afirmar que un “efecto vacuna” está sucediendo en la actualidad. Lo cierto es que, al menos en la población mayor de 80 años, la cantidad de fallecidos se ha reducido notablemente tras la inmunización a más del 60% de dicho grupo etario.</p>
 
     <div class="buttons" id="button_fallecidos">
         <button id="mayor_18" class="button">18-59</button>

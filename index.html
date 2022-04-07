@@ -776,7 +776,7 @@ background: #f1f7ff;
 
     <h3>Avance por región en Perú</h3>
 
-    <p class="texto-lr">Este mapa interactivo muestra la situación actual de la aplicación de vacunas en cada región del país. Se toman en cuenta personas inmunizadas con la vacunación completa, es decir, que hayan recibido las dos dosis. Para medir el porcentaje de avance en relación a la población de cada una, se usan las poblaciones objetivo asignadas por el Ministerio de Salud en 2022.</p>
+    <p class="texto-lr">Este mapa interactivo muestra la situación actual de aplicación de la dosis de refuerzo en cada región del país. Se toman en cuenta las personas inmunizadas con las tres dosis contra la COVID-19, las cuales son obligatorias para toda persona mayor de 18 años desde el pasado 1 de abril de 2022. Para medir el porcentaje de avance en relación a la población de cada una, se usan las poblaciones objetivo asignadas por el Ministerio de Salud en 2022.</p>
 
     <p class="texto-lr">A partir de las cifras regionales, se puede esbozar un rastreo del despliegue y de la velocidad del proceso de vacunación.</p>
 
@@ -812,7 +812,10 @@ background: #f1f7ff;
             <button class="btn btn-outline-primary btn-lg me-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-b" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Por dosis</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-c" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Por laboratorio</button>
+            <button class="btn btn-outline-primary btn-lg me-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-c" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Por laboratorio</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-outline-primary btn-lg" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-cc" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Por región</button>
           </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
@@ -830,6 +833,192 @@ background: #f1f7ff;
           <div class="tab-pane fade" id="pills-c" role="tabpanel" aria-labelledby="pills-contact-tab">
               <iframe title="Vacunados por día (Por fabricante)" aria-label="Interactive area chart" id="datawrapper-chart-ECTR9" src="https://datawrapper.dwcdn.net/ECTR9/9/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
                 </script>
+          </div>
+          <div class="tab-pane fade" id="pills-cc" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="p-4">
+              <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="active btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#amazonas" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Amazonas</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#ancash" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Áncash</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#apurimac" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Apurímac</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#arequipa" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Arequipa</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#ayacucho" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Ayacucho</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#cajamarca" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Cajamarca</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#callao" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Callao</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#cusco" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Cusco</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#huancavelica" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Huancavelica</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#huanuco" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Huánuco</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#ica" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Ica</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#junin" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Junín</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#lalibertad" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">La Libertad</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#lambayeque" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Lambayeque</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#lima" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Lima</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#loreto" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Loreto</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#madrededios" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Madre de Dios</button>
+                </li> 
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#moquegua" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Moquegua</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pasco" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pasco</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#piura" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Piura</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#puno" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Puno</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#sanmartin" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">San Martín</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#tacna" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Tacna</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#tumbes" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Tumbes</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#ucayali" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Ucayali</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                  <!-- <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <iframe title="Vacunados por día (Copy)" aria-label="Interactive area chart" id="datawrapper-chart-EdyCI" src="https://datawrapper.dwcdn.net/EdyCI/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+                </div> -->
+                <div class="tab-pane fade show active" id="amazonas" role="tabpanel" aria-labelledby="pills-home-tab">
+                  <iframe title="Vacunados por día (Total) - Amazonas" aria-label="Interactive area chart" id="datawrapper-chart-xPQax" src="https://datawrapper.dwcdn.net/xPQax/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="ancash" role="tabpanel" aria-labelledby="pills-profile-tab">
+                  <iframe title="Vacunados por día (Total) - Ancash" aria-label="Interactive area chart" id="datawrapper-chart-CJ4jd" src="https://datawrapper.dwcdn.net/CJ4jd/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="apurimac" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Apurimac" aria-label="Interactive area chart" id="datawrapper-chart-rUmEO" src="https://datawrapper.dwcdn.net/rUmEO/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="arequipa" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Arequipa" aria-label="Interactive area chart" id="datawrapper-chart-FkiYs" src="https://datawrapper.dwcdn.net/FkiYs/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="ayacucho" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Ayacucho" aria-label="Interactive area chart" id="datawrapper-chart-Sv9WC" src="https://datawrapper.dwcdn.net/Sv9WC/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="cajamarca" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Cajamarca" aria-label="Interactive area chart" id="datawrapper-chart-kv1Kt" src="https://datawrapper.dwcdn.net/kv1Kt/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="callao" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Callao" aria-label="Interactive area chart" id="datawrapper-chart-btLwg" src="https://datawrapper.dwcdn.net/btLwg/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="cusco" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Cusco" aria-label="Interactive area chart" id="datawrapper-chart-I0m7u" src="https://datawrapper.dwcdn.net/I0m7u/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="huancavelica" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Huancavelica" aria-label="Interactive area chart" id="datawrapper-chart-DuGju" src="https://datawrapper.dwcdn.net/DuGju/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="huanuco" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Huanuco" aria-label="Interactive area chart" id="datawrapper-chart-G0a3n" src="https://datawrapper.dwcdn.net/G0a3n/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="ica" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Ica" aria-label="Interactive area chart" id="datawrapper-chart-yVLQV" src="https://datawrapper.dwcdn.net/yVLQV/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="junin" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Junin" aria-label="Interactive area chart" id="datawrapper-chart-Qe3Ox" src="https://datawrapper.dwcdn.net/Qe3Ox/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="lalibertad" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - La Libertad" aria-label="Interactive area chart" id="datawrapper-chart-hACvW" src="https://datawrapper.dwcdn.net/hACvW/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="lambayeque" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Lambayeque" aria-label="Interactive area chart" id="datawrapper-chart-w4kgC" src="https://datawrapper.dwcdn.net/w4kgC/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="lima" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Lima" aria-label="Interactive area chart" id="datawrapper-chart-9uQGZ" src="https://datawrapper.dwcdn.net/9uQGZ/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="loreto" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Loreto" aria-label="Interactive area chart" id="datawrapper-chart-qqcdh" src="https://datawrapper.dwcdn.net/qqcdh/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="madrededios" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Madre de Dios" aria-label="Interactive area chart" id="datawrapper-chart-B0SPY" src="https://datawrapper.dwcdn.net/B0SPY/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="moquegua" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Moquegua" aria-label="Interactive area chart" id="datawrapper-chart-v1fyG" src="https://datawrapper.dwcdn.net/v1fyG/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="pasco" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Pasco" aria-label="Interactive area chart" id="datawrapper-chart-5ySQD" src="https://datawrapper.dwcdn.net/5ySQD/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="piura" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Piura" aria-label="Interactive area chart" id="datawrapper-chart-Af9ZG" src="https://datawrapper.dwcdn.net/Af9ZG/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="puno" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Puno" aria-label="Interactive area chart" id="datawrapper-chart-VQ48H" src="https://datawrapper.dwcdn.net/VQ48H/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="sanmartin" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - San Martin" aria-label="Interactive area chart" id="datawrapper-chart-fuj9B" src="https://datawrapper.dwcdn.net/fuj9B/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="tacna" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Tacna" aria-label="Interactive area chart" id="datawrapper-chart-9pZrF" src="https://datawrapper.dwcdn.net/9pZrF/5/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="tumbes" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Tumbes" aria-label="Interactive area chart" id="datawrapper-chart-KM7bc" src="https://datawrapper.dwcdn.net/KM7bc/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+                <div class="tab-pane fade" id="ucayali" role="tabpanel" aria-labelledby="pills-contact-tab">
+                  <iframe title="Vacunados por día (Total) - Ucayali" aria-label="Interactive area chart" id="datawrapper-chart-5yi6z" src="https://datawrapper.dwcdn.net/5yi6z/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                  </script>
+                </div>
+              </div>
+          </div>
           </div>
         </div>
     </div>
@@ -861,200 +1050,8 @@ background: #f1f7ff;
           <div class="tab-pane fade" id="pills" role="tabpanel" aria-labelledby="pills-contact-tab">
               <iframe title="Acumulado de vacunación (Por fabricante)" aria-label="Interactive area chart" id="datawrapper-chart-kr8xX" src="https://datawrapper.dwcdn.net/kr8xX/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
           </div>
-          <div class="tab-pane fade" id="pills-f" role="tabpanel" aria-labelledby="pills-contact-tab">
-              <iframe title="Acumulado de vacunación (Por fabricante)" aria-label="Interactive area chart" id="datawrapper-chart-kr8xX" src="https://datawrapper.dwcdn.net/kr8xX/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
-          </div>
         </div>
     </div>
-
-    <h3 class="h3-graficas" id="grafica1">Dosis aplicadas por día por regiones en Perú</h3>
-
-    <div class="p-4">
-        <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="active btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#amazonas" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Amazonas</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#ancash" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Áncash</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#apurimac" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Apurímac</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#arequipa" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Arequipa</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#ayacucho" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Ayacucho</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#cajamarca" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Cajamarca</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#callao" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Callao</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#cusco" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Cusco</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#huancavelica" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Huancavelica</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#huanuco" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Huánuco</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#ica" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Ica</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#junin" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Junín</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#lalibertad" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">La Libertad</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#lambayeque" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Lambayeque</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#lima" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Lima</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#loreto" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Loreto</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#madrededios" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Madre de Dios</button>
-          </li> 
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#moquegua" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Moquegua</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pasco" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pasco</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#piura" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Piura</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#puno" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Puno</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#sanmartin" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">San Martín</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#tacna" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Tacna</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#tumbes" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Tumbes</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2 mb-2" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#ucayali" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Ucayali</button>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-            <!-- <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-              <iframe title="Vacunados por día (Copy)" aria-label="Interactive area chart" id="datawrapper-chart-EdyCI" src="https://datawrapper.dwcdn.net/EdyCI/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
-          </div> -->
-          <div class="tab-pane fade show active" id="amazonas" role="tabpanel" aria-labelledby="pills-home-tab">
-            <iframe title="Vacunados por día (Total) - Amazonas" aria-label="Interactive area chart" id="datawrapper-chart-xPQax" src="https://datawrapper.dwcdn.net/xPQax/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="ancash" role="tabpanel" aria-labelledby="pills-profile-tab">
-            <iframe title="Vacunados por día (Total) - Ancash" aria-label="Interactive area chart" id="datawrapper-chart-CJ4jd" src="https://datawrapper.dwcdn.net/CJ4jd/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="apurimac" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Apurimac" aria-label="Interactive area chart" id="datawrapper-chart-rUmEO" src="https://datawrapper.dwcdn.net/rUmEO/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="arequipa" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Arequipa" aria-label="Interactive area chart" id="datawrapper-chart-FkiYs" src="https://datawrapper.dwcdn.net/FkiYs/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="ayacucho" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Ayacucho" aria-label="Interactive area chart" id="datawrapper-chart-Sv9WC" src="https://datawrapper.dwcdn.net/Sv9WC/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="cajamarca" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Cajamarca" aria-label="Interactive area chart" id="datawrapper-chart-kv1Kt" src="https://datawrapper.dwcdn.net/kv1Kt/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="callao" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Callao" aria-label="Interactive area chart" id="datawrapper-chart-btLwg" src="https://datawrapper.dwcdn.net/btLwg/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="cusco" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Cusco" aria-label="Interactive area chart" id="datawrapper-chart-I0m7u" src="https://datawrapper.dwcdn.net/I0m7u/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="huancavelica" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Huancavelica" aria-label="Interactive area chart" id="datawrapper-chart-DuGju" src="https://datawrapper.dwcdn.net/DuGju/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="huanuco" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Huanuco" aria-label="Interactive area chart" id="datawrapper-chart-G0a3n" src="https://datawrapper.dwcdn.net/G0a3n/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="ica" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Ica" aria-label="Interactive area chart" id="datawrapper-chart-yVLQV" src="https://datawrapper.dwcdn.net/yVLQV/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="junin" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Junin" aria-label="Interactive area chart" id="datawrapper-chart-Qe3Ox" src="https://datawrapper.dwcdn.net/Qe3Ox/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="lalibertad" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - La Libertad" aria-label="Interactive area chart" id="datawrapper-chart-hACvW" src="https://datawrapper.dwcdn.net/hACvW/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="lambayeque" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Lambayeque" aria-label="Interactive area chart" id="datawrapper-chart-w4kgC" src="https://datawrapper.dwcdn.net/w4kgC/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="lima" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Lima" aria-label="Interactive area chart" id="datawrapper-chart-9uQGZ" src="https://datawrapper.dwcdn.net/9uQGZ/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="loreto" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Loreto" aria-label="Interactive area chart" id="datawrapper-chart-qqcdh" src="https://datawrapper.dwcdn.net/qqcdh/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="madrededios" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Madre de Dios" aria-label="Interactive area chart" id="datawrapper-chart-B0SPY" src="https://datawrapper.dwcdn.net/B0SPY/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="moquegua" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Moquegua" aria-label="Interactive area chart" id="datawrapper-chart-v1fyG" src="https://datawrapper.dwcdn.net/v1fyG/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="pasco" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Pasco" aria-label="Interactive area chart" id="datawrapper-chart-5ySQD" src="https://datawrapper.dwcdn.net/5ySQD/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="piura" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Piura" aria-label="Interactive area chart" id="datawrapper-chart-Af9ZG" src="https://datawrapper.dwcdn.net/Af9ZG/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="puno" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Puno" aria-label="Interactive area chart" id="datawrapper-chart-VQ48H" src="https://datawrapper.dwcdn.net/VQ48H/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="sanmartin" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - San Martin" aria-label="Interactive area chart" id="datawrapper-chart-fuj9B" src="https://datawrapper.dwcdn.net/fuj9B/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="tacna" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Tacna" aria-label="Interactive area chart" id="datawrapper-chart-9pZrF" src="https://datawrapper.dwcdn.net/9pZrF/5/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="tumbes" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Tumbes" aria-label="Interactive area chart" id="datawrapper-chart-KM7bc" src="https://datawrapper.dwcdn.net/KM7bc/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="ucayali" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <iframe title="Vacunados por día (Total) - Ucayali" aria-label="Interactive area chart" id="datawrapper-chart-5yi6z" src="https://datawrapper.dwcdn.net/5yi6z/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-        </div>
-    </div>
-
-    <br>
 
     <h3>Vacunación por grupo etario</h3>
 
@@ -1068,24 +1065,25 @@ background: #f1f7ff;
     <div class="p-4">
         <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="active btn btn-outline-primary btn-lg me-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#etario-completa" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Dosis 2</button>
+            <button class="active btn btn-outline-primary btn-lg me-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#etario-refuerzo" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Dosis 3</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="btn btn-outline-primary btn-lg me-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#etario-refuerzo" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Dosis 3</button>
+            <button class="btn btn-outline-primary btn-lg me-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#etario-completa" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Dosis 2</button>
           </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
             <!-- <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <iframe title="Vacunados por día (Copy)" aria-label="Interactive area chart" id="datawrapper-chart-EdyCI" src="https://datawrapper.dwcdn.net/EdyCI/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
           </div> -->
-          <div class="tab-pane fade show active" id="etario-completa" role="tabpanel" aria-labelledby="pills-home-tab">
-            <iframe title="Vacunación completa por grupo etario en Perú" aria-label="Gráfica de rangos" id="datawrapper-chart-7nDQj" src="https://datawrapper.dwcdn.net/7nDQj/9/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="233"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-            </script>
-          </div>
-          <div class="tab-pane fade" id="etario-refuerzo" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <div class="tab-pane fade show active" id="etario-refuerzo" role="tabpanel" aria-labelledby="pills-profile-tab">
             <iframe title="Vacunación refuerzo por grupo etario en Perú" aria-label="Gráfica de rangos" id="datawrapper-chart-ojAOB" src="https://datawrapper.dwcdn.net/ojAOB/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="236"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
             </script>
           </div>
+          <div class="tab-pane fade" id="etario-completa" role="tabpanel" aria-labelledby="pills-home-tab">
+            <iframe title="Vacunación completa por grupo etario en Perú" aria-label="Gráfica de rangos" id="datawrapper-chart-7nDQj" src="https://datawrapper.dwcdn.net/7nDQj/9/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="233"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+            </script>
+          </div>
+          
         </div>
     </div>
 
@@ -1129,7 +1127,7 @@ background: #f1f7ff;
 <br>
 <footer style="background-color: #f0f0f0">
     <div class="w-1000">
-        <span><strong>Fecha de última modificación:</strong> 05 de abril de 2022</span>
+        <span><strong>Fecha de última modificación:</strong> 07 de abril de 2022</span>
         <br/>
     	<span><strong>Texto:</strong> Alexis Revollé</span>
     	<span><strong>Desarrollo Web:</strong> Anna Absi y Génesis León</span>

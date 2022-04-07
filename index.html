@@ -1062,8 +1062,31 @@ background: #f1f7ff;
     <p class="texto-lr">En esta gráfica se mide el avance de la inmunización por grupos etarios, es decir, la situación actual de cada una de estas poblaciones respecto a la vacunación contra la COVID-19. Para ello, se plantea una segmentación de un total de 32.781.250 personas, concebida en ocho grupos: de 80 a más (812.904), de 60 a 79 (3.851.743), de 50 a 59 (3.524.112), de 40 a 49 (4.604.711), de 30 a 39 (5.382.481), de 18 a 29 (6.788.969), de 12 a 17 (3.614.488), y de 5 a 1a (4.201.842).</p>
     <p class="texto-lr">En este medidor de avance por grupos de edad se usan las poblaciones objetivo consignadas por el propio Ministerio de Salud.</p>
     <div class="p-4">
-        <iframe title="Vacunación completa por grupo etario en Perú" aria-label="Gráfica de rangos" id="datawrapper-chart-7nDQj" src="https://datawrapper.dwcdn.net/7nDQj/9/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="233"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-        </script>
+        
+    </div>
+
+    <div class="p-4">
+        <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="active btn btn-outline-primary btn-lg me-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#etario-completa" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Dosis 2</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-outline-primary btn-lg me-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#etario-refuerzo" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Dosis 3</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <!-- <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <iframe title="Vacunados por día (Copy)" aria-label="Interactive area chart" id="datawrapper-chart-EdyCI" src="https://datawrapper.dwcdn.net/EdyCI/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="600"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+          </div> -->
+          <div class="tab-pane fade show active" id="etario-completa" role="tabpanel" aria-labelledby="pills-home-tab">
+            <iframe title="Vacunación completa por grupo etario en Perú" aria-label="Gráfica de rangos" id="datawrapper-chart-7nDQj" src="https://datawrapper.dwcdn.net/7nDQj/9/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="233"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+            </script>
+          </div>
+          <div class="tab-pane fade" id="etario-refuerzo" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <iframe title="Vacunación refuerzo por grupo etario en Perú" aria-label="Gráfica de rangos" id="datawrapper-chart-ojAOB" src="https://datawrapper.dwcdn.net/ojAOB/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="236"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+            </script>
+          </div>
+        </div>
     </div>
 
     <div class="total-box py-5">

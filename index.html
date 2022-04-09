@@ -756,20 +756,21 @@ background: #f1f7ff;
     <h2 style="text-align: center;">En febrero de 2021 comenzó la distribución de dosis para enfrentar la pandemia del coronavirus en nuestro país. Este especial, elaborado en base a la plataforma de Datos Abiertos del Gobierno, muestra cómo evoluciona la cobertura en todas las regiones.</h2>
     <!-- <p class="fecha">Reporte actualizado hoy: <span id="today"></span> </p> -->
     <div class="total-box pt-5">
-      <p class="total-title">Total con dosis de refuerzo*</p>
+      <p class="total-title">Total con tres dosis</p>
       <p class="total-number"><span id="dosis-refuerzo"></span><span class="total-number-sub"> personas</span></p>
       <div class="row mt-3">
+        <div class="col-xs-12">
+          <p class="total-subtitle">Total con cuatro dosis</p>
+          <p><span id="dosis4"></span> personas</p>
+        </div>
         <div class="col-xs-12">
           <p class="total-subtitle">Total dosis aplicadas</p>
           <p><span id="total-dosis"></span> dosis</p>
         </div>
       </div>
     </div>
-    <p class="fecha" >El reporte y las siguientes gráficas están actualizadas al: <span id="fecha"></span>**</p>
-    <small>
-    *Para este informe, cuando mencionamos ‘dosis de refuerzo’ nos referimos a quienes hayan recibido 3 dosis de la vacuna contra la COVID-19. 
-    </small>
-    <small>** Últimos datos publicados por el MINSA.</small>
+    <p class="fecha" >El reporte y las siguientes gráficas están actualizadas al: <span id="fecha"></span>*</p>
+    <small>* Últimos datos publicados por el MINSA.</small>
 </div>
 
 <div id="content__teaser">
@@ -1228,10 +1229,13 @@ d3.json("https://raw.githubusercontent.com/annaabsi/git-scraper-vacunacion/main/
     var dosis1 = parseInt(d["total_dosis1"].replace(/,/g, ''));
     var dosis2 = parseInt(d["total_dosis2"].replace(/,/g, ''));
     var dosis3 = parseInt(d["total_dosis3"].replace(/,/g, ''));
+    var dosis4 = parseInt(d["total_dosis4"].replace(/,/g, ''));
     var dosis = parseInt(d["total_dosis"].replace(/,/g, ''));
     var totalDosis1 = d3.select("#solo-primera-dosis").append("span").text((dosis1-dosis2).toLocaleString('id-ID'));
     var totalDosis2 = d3.select("#total-vacunados").append("span").text((dosis2).toLocaleString('id-ID'));
     var totalDosis3 = d3.select("#dosis-refuerzo").append("span").text((dosis3).toLocaleString('id-ID'));
+    var totalDosis4 = d3.select("#dosis4").append("span").text((dosis4).toLocaleString('id-ID'));
+
 
     var totalDosis = d3.select("#total-dosis").append("span").text((dosis).toLocaleString('id-ID'));
     var indiceVacunados = d3.select("#indice-vacunados").append("span").text(Math.round((dosis3/(29381884/100000))).toLocaleString('id-ID'));

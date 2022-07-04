@@ -217,6 +217,28 @@ function draw_chart(container, url) {
                         y: 599,
                     },
                     text: "Tercera ola",
+                }],
+            },
+                      {
+                draggable: "",
+                labelOptions: {
+                    shape: "connector",
+                    align: "right",
+                    justify: true,
+                    crop: true,
+                    style: {
+                        fontSize: "0.8em",
+                        textOutline: "1px white",
+                    },
+                },
+                labels: [{
+                    point: {
+                        xAxis: 0,
+                        yAxis: 0,
+                        x: "1656201600000",
+                        y: 599,
+                    },
+                    text: "Cuarta ola",
                 }, ],
             },
         ],
